@@ -15,7 +15,7 @@ class WorksController < ApplicationController
         @work = Work.new(work_params)
     
         if @work.save
-          render json: @work, status: :created, location: @worker
+          render json: @work, status: :created, location: @work
         else
           render json: @work.errors, status: :unprocessable_entity
         end

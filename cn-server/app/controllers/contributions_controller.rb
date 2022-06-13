@@ -3,31 +3,31 @@ class ContributionsController < ApplicationController
     before_action :set_contribution, only: [:show, :update, :destroy]    
 
     def index
-        works = Work.all
-        render json: works.to_json(only: [:id, :title, :genre, :contributions], :include => {:contributions => {only: [:id, :author_id]}})
+        contributions = Contribution.all
+        render json: contributions.to_json(only: [:id, :text])
     end
 
     def show
-        render json: @work.to_json(only: [:id, :title, :genre, :contributions], :include => {:contributions => {only: [:id, :author_id]}})
+        render json: @contribution.to_json(only: [:id, :text])
     end
 
     def create
-        @work = Work.new(work_params)
+        @contribution = Contribution.new(contribution_params)
     
-        if @work.save
-          render json: @work, status: :created, location: @worker
+        if @contribution.save
+          render json: @contribution, status: :created, location: @contribution
         else
-          render json: @work.errors, status: :unprocessable_entity
+          render json: @contribution.errors, status: :unprocessable_entity
         end
     end
 
     def update
-        @work.update(work_params)
-        render json: @work       
+        @contribution.update(contribution_params)
+        render json: @contribution      
     end
 
     def destroy
-        @work.destroy
+        @contribution.destroy
     end
 
     private
