@@ -1,4 +1,4 @@
 class Work < ApplicationRecord
     belongs_to :author
-    belongs_to :work
+    has_many :contributions
 end
