@@ -1,6 +1,6 @@
 class ContributionsController < ApplicationController
 
-    before_action :set_work, only: [:show, :update, :destroy]    
+    before_action :set_contribution, only: [:show, :update, :destroy]    
 
     def index
         works = Work.all
@@ -32,12 +32,12 @@ class ContributionsController < ApplicationController
 
     private
 
-    def set_work
-        @work = Work.find(params[:id])
+    def set_contribution
+        @contribution = Contribution.find(params[:id])
     end
 
-    def work_params
-        params.require(:work).permit(:title, :genre, :contributions, :author_id)
+    def contribution_params
+        params.require(:contribution).permit(:text, :author_id, :work_id)
     end 
     
 end
