@@ -4,11 +4,11 @@ class AuthorsController < ApplicationController
 
     def index
         authors = Author.all
-        render json: authors.to_json(only: [:id, :name, :statment], :include => {:works => {only: [:id, :title, :genre, :contributions]}}, :include => {only: [:id, :text]})
+        render json: authors.to_json(only: [:id, :name, :statement], :include => {:works => {only: [:id, :title, :genre, :contributions]}})
     end
 
     def show
-        render json: @author.to_json(only: [:id, :name, :statment], :include => {:works => {only: [:id, :title, :genre, :contributions]}}, :include => {only: [:id, :text]})
+        render json: @author.to_json(only: [:id, :name, :statement], :include => {:works => {only: [:id, :title, :genre, :contributions]}})
     end
 
     def create
