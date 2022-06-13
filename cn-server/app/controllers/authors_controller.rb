@@ -8,8 +8,7 @@ class AuthorsController < ApplicationController
     end
 
     def show
-        #band = Band.find(params[:id])
-        render json: @band.to_json(only: [:id, :name], :include => {:players => {only: [:name, :instrument, :band_id]}})
+        render json: @author.to_json(only: [:id, :name, :statment], :include => {:works => {only: [:id, :title, :genre, :contributions]}}, :include => {only: [:id, :text]})
     end
 
     def create
