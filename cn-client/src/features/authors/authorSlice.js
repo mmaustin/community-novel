@@ -3,7 +3,7 @@ import DataServiceA from '../../services/authorService'
 
 const initialState = {authors: [], status: 'idle', error: null,}
 export const fetchAuthors = createAsyncThunk(
-  "authors/retrieve",
+  "authors/fetch",
   async () => {
     const res = await DataServiceA.getAll();
     console.log(res);
@@ -20,7 +20,7 @@ const authorSlice = createSlice({
 
   extraReducers(builder){
     builder
-    .addCase(fetchAuthors.pending, (state) => {
+    .addCase(fetchAuthors.pending, (state, action) => {
       state.status = 'loading'
     })
     .addCase(fetchAuthors.fulfilled, (state, action) => {
