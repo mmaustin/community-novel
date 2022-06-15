@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import DataServiceA from '../../services/authorService'
 
-const initialState = {bands: [], status: 'idle', error: null,}
+const initialState = {authors: [], status: 'idle', error: null,}
 export const retrieveAuthors = createAsyncThunk(
   "authors/retrieve",
   async () => {
@@ -10,3 +10,27 @@ export const retrieveAuthors = createAsyncThunk(
     return res.data;
   }
 );
+
+const authorSlice = createSlice({
+  name: 'authors',
+  initialState,
+  reducers: {
+
+  },
+
+  extraReducers(builder){
+    builder
+    .addCase(fetchPosts.pending, (state, action) => {
+      state.status = 'loading'
+    })
+    .addCase(fetchPosts.fulfilled, (state, action) => {
+      state.status = 'succeeded'
+      // Add any fetched posts to the array
+      state.posts = state.posts.concat(action.payload)
+    })
+    .addCase(fetchPosts.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })
+  }
+})
