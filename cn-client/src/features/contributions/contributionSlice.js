@@ -1,17 +1,17 @@
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-import DataServiceA from '../../services/authorService'
+import DataServiceC from '../../services/contributionService'
 
-const initialState = {authors: [], status: 'idle', error: null,}
-export const fetchAuthors = createAsyncThunk(
-  "authors/fetch",
+const initialState = {contributions: [], status: 'idle', error: null,}
+export const fetchContributions = createAsyncThunk(
+  "contributions/fetch",
   async () => {
-    const res = await DataServiceA.getAll();
+    const res = await DataServiceC.getAll();
     return res.data;
   }
 );
 
-const authorSlice = createSlice({
-  name: 'authors',
+const contributionSlice = createSlice({
+  name: 'contributions',
   initialState,
   reducers: {
 
@@ -19,18 +19,18 @@ const authorSlice = createSlice({
 
   extraReducers(builder){
     builder
-    .addCase(fetchAuthors.pending, (state, action) => {
+    .addCase(fetchContributions.pending, (state, action) => {
       state.status = 'loading'
     })
-    .addCase(fetchAuthors.fulfilled, (state, action) => {
+    .addCase(fetchContributions.fulfilled, (state, action) => {
       state.status = 'succeeded'
-      state.authors = state.authors.concat(action.payload)
+      state.contributions = state.contributions.concat(action.payload)
     })
-    .addCase(fetchAuthors.rejected, (state, action) => {
+    .addCase(fetchContributions.rejected, (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
     })
   }
 })
 
-export default authorSlice.reducer
+export default contributionSlice.reducer
