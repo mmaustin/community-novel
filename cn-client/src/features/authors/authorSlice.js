@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import DataServiceA from '../../services/authorService'
 
 const initialState = {authors: [], status: 'idle', error: null,}
-export const retrieveAuthors = createAsyncThunk(
+export const fetchAuthors = createAsyncThunk(
   "authors/retrieve",
   async () => {
     const res = await DataServiceA.getAll();
@@ -20,17 +20,18 @@ const authorSlice = createSlice({
 
   extraReducers(builder){
     builder
-    .addCase(fetchPosts.pending, (state, action) => {
+    .addCase(fetchAuthors.pending, (state) => {
       state.status = 'loading'
     })
-    .addCase(fetchPosts.fulfilled, (state, action) => {
+    .addCase(fetchAuthors.fulfilled, (state, action) => {
       state.status = 'succeeded'
-      // Add any fetched posts to the array
-      state.posts = state.posts.concat(action.payload)
+      state.authors = state.authors.concat(action.payload)
     })
-    .addCase(fetchPosts.rejected, (state, action) => {
+    .addCase(fetchAuthors.rejected, (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
     })
   }
 })
+
+export default authorSlice.reducer
