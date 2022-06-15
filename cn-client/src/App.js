@@ -1,13 +1,16 @@
 import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAuthors } from './features/authors/authorSlice';
-//import { fetchWorks } from './features/works/workSlice';
+import { fetchWorks } from './features/works/workSlice';
+import { fetchContributions } from './features/contributions/contributionSlice';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchAuthors())
+    dispatch(fetchWorks())
+    dispatch(fetchContributions())
   }, [dispatch])
 
   return (
