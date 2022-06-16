@@ -33,4 +33,6 @@ const authorSlice = createSlice({
   }
 })
 
+export const allAuthors = state => state.authors.authors;
+
 export default authorSlice.reducer
