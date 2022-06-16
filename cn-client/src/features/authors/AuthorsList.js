@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { allAuthors} from './authorSlice';
 import { fetchAuthors } from './authorSlice';
 import { AuthorWorks } from './AuthorWorks';
+import { AuthorContributions } from './AuthorContributions';
 
 export const AuthorsList = () => {
 
@@ -23,6 +24,7 @@ export const AuthorsList = () => {
             return <div key={i}>
                 <p>{author.name}</p>
                 <AuthorWorks works={author.works}/>
+                <AuthorContributions contributions={author.contributions}/>
             </div>
         })
     }
