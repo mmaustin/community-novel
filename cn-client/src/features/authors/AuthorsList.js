@@ -7,11 +7,25 @@ export const AuthorsList = () => {
 
     const dispatch = useDispatch();
     const authors = useSelector(allAuthors);
+    const authorsStatus = useSelector(state => state.authors.status);
 
-    
+    useEffect(() => {
+        if (authorsStatus === 'idle'){
+            dispatch(fetchAuthors());
+        }
+    }, [authorsStatus, dispatch])
+
+    let content;
+
+    if (authorsStatus === 'succeeded'){
+        content = authors.map((author, i) => {
+            return <div key={i}><p>{author.name}</p></div>
+        })
+    }
 
     return(
         <>
+            {content};
         </>
     )
 }
