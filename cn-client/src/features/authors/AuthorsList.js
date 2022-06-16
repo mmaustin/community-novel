@@ -8,7 +8,7 @@ export const AuthorsList = () => {
     const dispatch = useDispatch();
     const authors = useSelector(allAuthors);
     const authorsStatus = useSelector(state => state.authors.status);
-
+    
     useEffect(() => {
         if (authorsStatus === 'idle'){
             dispatch(fetchAuthors());
@@ -25,7 +25,7 @@ export const AuthorsList = () => {
 
     return(
         <>
-            {content};
+            {content}
         </>
     )
 }
