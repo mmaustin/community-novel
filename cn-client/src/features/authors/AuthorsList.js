@@ -4,6 +4,7 @@ import { allAuthors} from './authorSlice';
 import { fetchAuthors } from './authorSlice';
 import { AuthorWorks } from './AuthorWorks';
 import { AuthorContributions } from './AuthorContributions';
+import { Link } from 'react-router-dom';
 
 export const AuthorsList = () => {
 
@@ -25,6 +26,7 @@ export const AuthorsList = () => {
                 <p>{author.name}</p>
                 <AuthorWorks works={author.works}/>
                 <AuthorContributions contributions={author.contributions}/>
+                <Link to={`/get-author/${author.id}`} className="author-link">Single Author</Link>
             </div>
         })
     }
