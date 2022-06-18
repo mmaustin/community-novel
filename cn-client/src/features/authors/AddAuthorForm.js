@@ -20,7 +20,7 @@ export const AddAuthorForm = () => {
         if (canSave) {
           try {
             setAddRequestStatus('pending')
-            await dispatch(createAuthor({ name, statement })).unwrap()
+            await dispatch(createAuthor({author: { name, statement }})).unwrap()
             setName('');
             setStatement('');
           } catch (err) {

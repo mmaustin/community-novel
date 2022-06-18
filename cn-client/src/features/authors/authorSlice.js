@@ -11,8 +11,8 @@ export const fetchAuthors = createAsyncThunk(
 );
 export const createAuthor = createAsyncThunk(
   "author/create",
-  async ({ name, statement }) => {
-    const res = await DataServiceA.create({ name, statement });
+  async ({ author }) => {
+    const res = await DataServiceA.create(author);
     return res.data;
   }
 );
