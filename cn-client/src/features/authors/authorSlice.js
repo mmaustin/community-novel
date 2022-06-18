@@ -16,6 +16,13 @@ export const createAuthor = createAsyncThunk(
     return res.data;
   }
 );
+export const getAuthor = createAsyncThunk(
+  "author/retrieve",
+  async ({id}) => {
+    const res = await DataServiceA.get(id);
+    return res.data;
+  }
+);
 
 const authorSlice = createSlice({
   name: 'authors',
