@@ -11,6 +11,8 @@ export const SingleAuthorPage = () => {
     const author = useSelector(state => getAuthorById(state, authorId));
 
     return(
-        <></>
+        <>
+            {author ? <p>{author.name}</p> : <p>Nope!</p>}
+        </>
     )
 }
