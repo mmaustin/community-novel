@@ -32,7 +32,29 @@ export const AddAuthorForm = () => {
       }
 
     return(
-        <>
-        </>
+        <section>
+            <h2>Add an Author</h2>
+            <form>
+            <label htmlFor="authorName">Author Name:</label>
+            <input
+                type="text"
+                id="player-name"
+                name="playerName"
+                value={name}
+                onChange={onNameChanged}
+            />
+            <label htmlFor="statement">Statement:</label>
+            <input
+                type="text"
+                id="author-statement"
+                name="statement"
+                value={statement}
+                onChange={onStatementChanged}
+            />
+            <button type="button" onClick={onSaveAuthorClicked} disabled={!canSave}>
+                Save Author
+            </button>
+            </form>
+      </section>
     )
 }
