@@ -6,8 +6,6 @@ export const AuthorContributions = ({contributions}) => {
         allContributions = contributions.map((contribution,i)=>{
             return <p key={i}>{contribution.text}</p>
         })
-    } else{
-        allContributions = 'Ain\'t nothing here!'
     }
 
     return(

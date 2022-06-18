@@ -9,6 +9,13 @@ export const fetchAuthors = createAsyncThunk(
     return res.data;
   }
 );
+export const createAuthor = createAsyncThunk(
+  "author/create",
+  async ({ name, statement }) => {
+    const res = await DataServiceA.create({ name, statement });
+    return res.data;
+  }
+);
 
 const authorSlice = createSlice({
   name: 'authors',

@@ -28,7 +28,7 @@ class AuthorsController < ApplicationController
 
     def destroy
         @author.destroy
-    end   
+    endxs
 
     private
 
