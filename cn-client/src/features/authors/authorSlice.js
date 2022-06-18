@@ -37,6 +37,17 @@ const authorSlice = createSlice({
       state.status = 'failed'
       state.error = action.error.message
     })
+    .addCase(createAuthor.pending, (state, action) => {
+      state.status = 'loading'
+    })
+    .addCase(createAuthor.fulfilled, (state, action) => {
+      state.status = 'succeeded'
+      state.authors.push(action.payload)
+    })
+    .addCase(createAuthor.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })
   }
 })
 
