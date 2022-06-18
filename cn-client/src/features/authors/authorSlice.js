@@ -67,4 +67,7 @@ const authorSlice = createSlice({
 
 export const allAuthors = state => state.authors.authors;
 
+export const getAuthorById = (state, authorId) => 
+  state.authors.authors.find(author => author.id === authorId)
+
 export default authorSlice.reducer
