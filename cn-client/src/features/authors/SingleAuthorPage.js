@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector} from 'react-redux'
-import { useParams} from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom';
 import { getAuthorById } from './authorSlice';
 
 export const SingleAuthorPage = () => {
@@ -13,6 +13,7 @@ export const SingleAuthorPage = () => {
     return(
         <>
             {author ? <p>{author.name}</p> : <p>Nope!</p>}
+            { author ? <Link to={`/update-author/${author.id}`} >Edit Band</Link> : <p></p>}            
         </>
     )
 }

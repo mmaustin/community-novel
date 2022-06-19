@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { AuthorsList } from './features/authors/AuthorsList';
 import { AddAuthorForm } from './features/authors/AddAuthorForm';
 import { SingleAuthorPage } from './features/authors/SingleAuthorPage';
+import { UpdateAuthor } from './features/authors/UpdateAuthor';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Route exact path='/' element={< AuthorsList />} />
       <Route exact path='/add-author' element={< AddAuthorForm />} />
       <Route exact path='/get-author/:authorId' element={<SingleAuthorPage />} />
+      <Route exact path='/update-author/:authorId' element={<UpdateAuthor />} />      
       </Routes>
     </Router>
   );
