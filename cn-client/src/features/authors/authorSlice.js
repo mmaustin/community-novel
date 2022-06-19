@@ -23,6 +23,13 @@ export const getAuthor = createAsyncThunk(
     return res.data;
   }
 );
+export const updateAuthor = createAsyncThunk(
+  "author/update",
+  async ({ id, author }) => {
+    const res = await DataServiceA.update(id, author);
+    return res.data;
+  }
+);
 
 const authorSlice = createSlice({
   name: 'authors',
