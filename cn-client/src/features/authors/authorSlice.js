@@ -68,7 +68,23 @@ const authorSlice = createSlice({
     .addCase(getAuthor.fulfilled, (state, action) => {
       state.status = 'succeeded'
       state.authors = [action.payload]
-    })    
+    })
+    .addCase(updateAuthor.pending, (state, action) => {
+      state.status = 'loading'
+    })
+    .addCase(updateAuthor.fulfilled, (state, action) => {
+      state.status = 'succeeded';
+      const updatedState = state.authors.map(author => {
+        if (author.id === action.payload.id){
+          author.name = action.payload.name;
+          author.statement = action.payload.statement;
+          return author;
+        } else {
+          return author;
+        }
+      });
+      state.authors = updatedState;
+    })
   }
 })
 
