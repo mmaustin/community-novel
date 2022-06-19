@@ -13,7 +13,7 @@ export const SingleAuthorPage = () => {
     return(
         <>
             {author ? <p>{author.name}</p> : <p>Nope!</p>}
-            { author ? <Link to={`/update-author/${author.id}`} >Edit Band</Link> : <p></p>}            
+            {author ? <Link to={`/update-author/${author.id}`} >Edit Author</Link> : <p></p>}            
         </>
     )
 }
