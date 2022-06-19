@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
-import { useDispatch} from 'react-redux';
-import { createAuthor} from './authorSlice';
+import { useDispatch, useSelector} from 'react-redux';
+import { useNavigate, useParams} from 'react-router-dom'
+import { getAuthorById } from './authorSlice';
+import { updateAuthor } from './authorSlice';
 
-export const AddAuthorForm = () => {
+export const UpdateAuthor = () => {
+
+    const params = useParams();
+    const authorId = parseInt(params.authorId);
+
+    const author = useSelector(state => getAuthorById(state, authorId));    
 
     const [name, setName] = useState('');
     const [statement, setStatement] = useState('');
@@ -20,7 +27,7 @@ export const AddAuthorForm = () => {
         if (canSave) {
           try {
             setAddRequestStatus('pending')
-            await dispatch(createAuthor({author: { name, statement }})).unwrap()
+            await dispatch(updateAuthor({author: { name, statement }})).unwrap()
             setName('');
             setStatement('');
           } catch (err) {
