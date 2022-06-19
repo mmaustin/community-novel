@@ -11,11 +11,12 @@ export const UpdateAuthor = () => {
 
     const author = useSelector(state => getAuthorById(state, authorId));    
 
-    const [name, setName] = useState('');
-    const [statement, setStatement] = useState('');
+    const [name, setName] = useState(author.name);
+    const [statement, setStatement] = useState(author.statement);
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
+    let navigate = useNavigate();    
 
     const onNameChanged = (e) => setName(e.target.value);
     const onStatementChanged = (e) => setStatement(e.target.value);
@@ -23,11 +24,11 @@ export const UpdateAuthor = () => {
     const canSave =
     [name, statement].every(Boolean) && addRequestStatus === 'idle'
 
-    const onSaveAuthorClicked = async () => {
+    const onUpdateAuthorClicked = async () => {
         if (canSave) {
           try {
             setAddRequestStatus('pending')
-            await dispatch(updateAuthor({author: { name, statement }})).unwrap()
+            await dispatch(updateAuthor({id: author.id, author: { name, statement }})).unwrap()
             setName('');
             setStatement('');
           } catch (err) {
@@ -36,6 +37,7 @@ export const UpdateAuthor = () => {
             setAddRequestStatus('idle')
           }
         }
+        navigate(`/get-author/${author.id}`);        
       }
 
     return(
@@ -58,7 +60,7 @@ export const UpdateAuthor = () => {
                 value={statement}
                 onChange={onStatementChanged}
             />
-            <button type="button" onClick={onSaveAuthorClicked} disabled={!canSave}>
+            <button type="button" onClick={onUpdateAuthorClicked} disabled={!canSave}>
                 Save Author
             </button>
             </form>
