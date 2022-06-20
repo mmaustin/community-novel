@@ -30,6 +30,13 @@ export const updateAuthor = createAsyncThunk(
     return res.data;
   }
 );
+export const deleteAuthor = createAsyncThunk(
+  "author/delete",
+  async ({ id }) => {
+    await DataServiceA.delete(id);
+    return { id };
+  }
+);
 
 const authorSlice = createSlice({
   name: 'authors',
