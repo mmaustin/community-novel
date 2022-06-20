@@ -3,6 +3,7 @@ import { useSelector, useDispatch} from 'react-redux'
 import { useParams, Link, useNavigate} from 'react-router-dom';
 import { getAuthorById } from './authorSlice';
 import { deleteAuthor } from './authorSlice';
+import { CreateAuthorsWork } from './CreateAuthorsWork';
 
 export const SingleAuthorPage = () => {
 
@@ -23,6 +24,7 @@ export const SingleAuthorPage = () => {
         <>
             {author ? <p>{author.name}</p> : <p>Nope!</p>}
             {author ? <Link to={`/update-author/${author.id}`} >Edit Author</Link> : <p></p>}
+            < CreateAuthorsWork/>
             <p><button onClick={deleteThisAuthor}>Delete Author</button></p>         
         </>
     )
