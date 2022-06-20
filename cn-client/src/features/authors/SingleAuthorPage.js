@@ -23,7 +23,7 @@ export const SingleAuthorPage = () => {
         <>
             {author ? <p>{author.name}</p> : <p>Nope!</p>}
             {author ? <Link to={`/update-author/${author.id}`} >Edit Author</Link> : <p></p>}
-            <button onClick={deleteThisAuthor}>Delete Author</button>            
+            <p><button onClick={deleteThisAuthor}>Delete Author</button></p>         
         </>
     )
 }
