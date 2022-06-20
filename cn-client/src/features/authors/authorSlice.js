@@ -92,6 +92,11 @@ const authorSlice = createSlice({
       });
       state.authors = updatedState;
     })
+    .addCase(deleteAuthor.fulfilled, (state, action) => {
+      state.status = 'succeeded';
+      const newState = state.authors.filter(author => author.id !== action.payload.id);
+      state.authors = newState;
+    })    
   }
 })
 
