@@ -1,11 +1,12 @@
 import React from 'react';
 
-export const CreateAuthorsWork = () => {
+export const CreateAuthorsWork = ({author}) => {
 
 
     return(
         <>
-            <p>Author's Work</p>
+            <p>Author's Work Component</p>
+            {author.id}
         </>
     )
 }
