@@ -35,22 +35,21 @@ export const AddAuthorForm = () => {
         <section>
             <h2>Add an Author</h2>
             <form>
-            <label htmlFor="authorName">Author Name:</label>
+            <label htmlFor="author-name">Author Name:</label>
             <input
                 type="text"
-                id="player-name"
-                name="playerName"
+                id="author-name"
+                name="author-name"
                 value={name}
                 onChange={onNameChanged}
             />
-            <label htmlFor="statement">Statement:</label>
-            <input
-                type="text"
+            <label htmlFor="author-statement">Statement:</label>
+            <textarea
                 id="author-statement"
                 name="statement"
                 value={statement}
                 onChange={onStatementChanged}
-            />
+            ></textarea>
             <button type="button" onClick={onSaveAuthorClicked} disabled={!canSave}>
                 Save Author
             </button>
