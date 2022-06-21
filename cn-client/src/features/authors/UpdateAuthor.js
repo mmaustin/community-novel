@@ -42,7 +42,7 @@ export const UpdateAuthor = () => {
 
     return(
         <section>
-            <h2>Add an Author</h2>
+            <h2>Update Author Information</h2>
             <form>
             <label htmlFor="authorName">Author Name:</label>
             <input
@@ -61,7 +61,7 @@ export const UpdateAuthor = () => {
                 onChange={onStatementChanged}
             />
             <button type="button" onClick={onUpdateAuthorClicked} disabled={!canSave}>
-                Save Author
+                Update Author
             </button>
             </form>
       </section>

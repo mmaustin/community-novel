@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { allAuthors} from './authorSlice';
 import { fetchAuthors } from './authorSlice';
+import { fetchWorks } from '../works/workSlice';
 import { AuthorWorks } from './AuthorWorks';
 import { AuthorContributions } from './AuthorContributions';
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ export const AuthorsList = () => {
     useEffect(() => {
         if (authorsStatus === 'idle'){
             dispatch(fetchAuthors());
+            dispatch(fetchWorks());
         }
     }, [authorsStatus, dispatch])
 
