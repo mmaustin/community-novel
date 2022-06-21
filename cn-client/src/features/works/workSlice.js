@@ -11,8 +11,8 @@ export const fetchWorks = createAsyncThunk(
 );
 export const createWork = createAsyncThunk(
   'work/create',
-  async ({author}) => {
-    const res = await DataServiceW.create(author);
+  async ({work}) => {
+    const res = await DataServiceW.create(work);
     return res.data;
   }
 );
@@ -37,6 +37,17 @@ const workSlice = createSlice({
       state.status = 'failed'
       state.error = action.error.message
     })
+    .addCase(createWork.pending, (state, action) => {
+      state.status = 'loading'
+    })
+    .addCase(createWork.fulfilled, (state, action) => {
+      state.status = 'succeeded'
+      state.works.push(action.payload)
+    })
+    .addCase(createWork.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })    
   }
 })
 
