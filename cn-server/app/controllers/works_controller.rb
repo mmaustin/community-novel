@@ -37,7 +37,7 @@ class WorksController < ApplicationController
     end
 
     def work_params
-        params.require(:work).permit(:title, :genre, :contributions, :author_id)
+        params.require(:work).permit(:title, :genre, :contribution_number, :author_id)
     end    
 
 end
