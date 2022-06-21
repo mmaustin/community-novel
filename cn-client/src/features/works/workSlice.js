@@ -9,6 +9,13 @@ export const fetchWorks = createAsyncThunk(
     return res.data;
   }
 );
+export const createWork = createAsyncThunk(
+  'work/create',
+  async ({author}) => {
+    const res = await DataServiceW.create(author);
+    return res.data;
+  }
+);
 
 const workSlice = createSlice({
   name: 'works',
