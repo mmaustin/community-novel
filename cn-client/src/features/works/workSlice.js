@@ -55,7 +55,13 @@ const workSlice = createSlice({
       state.status = 'failed'
       state.error = action.error.message
     })
-    
+    .addCase(getWork.pending, (state, action) => {
+      state.status = 'loading';
+    })
+    .addCase(getWork.fulfilled, (state, action) => {
+      state.status = 'succeeded';
+      state.works = [action.payload];
+    })
   }
 })
 
