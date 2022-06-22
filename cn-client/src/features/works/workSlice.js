@@ -11,11 +11,18 @@ export const fetchWorks = createAsyncThunk(
 );
 export const createWork = createAsyncThunk(
   'work/create',
-  async ({work}) => {
-    const res = await DataServiceW.create(work);
+  async ({id}) => {
+    const res = await DataServiceW.create(id);
     return res.data;
   }
 );
+export const getWork = createAsyncThunk(
+  'work/retrieve',
+  async ({work}) => {
+    const res = await DataServiceW.get(work);
+    return res.data;
+  }
+)
 
 const workSlice = createSlice({
   name: 'works',
@@ -47,7 +54,8 @@ const workSlice = createSlice({
     .addCase(createWork.rejected, (state, action) => {
       state.status = 'failed'
       state.error = action.error.message
-    })    
+    })
+    
   }
 })
 
