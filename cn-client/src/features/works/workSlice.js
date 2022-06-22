@@ -65,4 +65,7 @@ const workSlice = createSlice({
   }
 })
 
+export const getWorkById = (state, workId) => 
+  state.works.works.find(work => work.id === workId)
+
 export default workSlice.reducer
