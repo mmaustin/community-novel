@@ -36,6 +36,7 @@ export const AuthorsList = () => {
     return(
         <>
             {content}
+            <Link to={'/all-works'}>All The Works!</Link>
         </>
     )
 }
