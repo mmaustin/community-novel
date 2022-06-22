@@ -65,6 +65,8 @@ const workSlice = createSlice({
   }
 })
 
+export const allWorks = state => state.works.works;
+
 export const getWorkById = (state, workId) => 
   state.works.works.find(work => work.id === workId)
 
