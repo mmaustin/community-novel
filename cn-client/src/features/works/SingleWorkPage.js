@@ -1,31 +1,23 @@
 import React from 'react'
-import { useSelector, useDispatch} from 'react-redux'
-import { useParams, Link, useNavigate} from 'react-router-dom';
-import { getAuthorById } from './authorSlice';
-import { deleteAuthor } from './authorSlice';
-import { CreateAuthorsWork } from './CreateAuthorsWork';
+import { useSelector} from 'react-redux'
+import { useParams} from 'react-router-dom';
+import { getWorkById } from './workSlice';
 
-export const SingleAuthorPage = () => {
-
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+export const SingleWorkPage = () => {
 
     const params = useParams();
-    const authorId = parseInt(params.authorId);
+    const workId = parseInt(params.workId);
 
-    const author = useSelector(state => getAuthorById(state, authorId));
+    const work = useSelector(state => getWorkById(state, workId));
 
-    const deleteThisAuthor = () => {
+/*    const deleteThisAuthor = () => {
         dispatch(deleteAuthor({id: author.id}));
         navigate('/');
     }
-
+*/
     return(
         <>
-            {author ? <p>{author.name}</p> : <p>Nope!</p>}
-            {author ? <Link to={`/update-author/${author.id}`} >Edit Author</Link> : <p></p>}
-            < CreateAuthorsWork author={author}/>
-            <p><button onClick={deleteThisAuthor}>Delete Author</button></p>         
+            {work ? <p>{work.title}</p> : <p>Nope!</p>}       
         </>
     )
 }
