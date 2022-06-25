@@ -4,8 +4,8 @@ class DataServiceC {
     getAll() {
         return http.get("/contributions");
     }
-    create(band) {
-        return http.post("/contributions", band);
+    create(contribution) {
+        return http.post("/contributions", contribution);
     }
     get(id) {
         return http.get(`/contributions/${id}`);
