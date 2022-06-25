@@ -29,8 +29,20 @@ export const AddContribution = ({work}) => {
       }
 
     return(
-        <>
-            <p>{work.author_id} and {work.id}</p>
-        </>
+        <section>
+            <h2>Add an Author</h2>
+            <form>
+            <label htmlFor="contribution">Contribution:</label>
+            <textarea
+                id="contribution"
+                name="contribution"
+                value={text}
+                onChange={onTextChanged}
+            ></textarea>
+            <button type="button" onClick={saveContribution} disabled={!canSave}>
+                Save Contribution
+            </button>
+            </form>
+      </section>
     )
 }
