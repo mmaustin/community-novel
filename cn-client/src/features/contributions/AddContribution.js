@@ -8,6 +8,7 @@ export const AddContribution = () => {
 
     return(
         <>
+            <p>Show me the way!</p>
         </>
     )
 }

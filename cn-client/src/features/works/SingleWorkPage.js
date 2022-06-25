@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector} from 'react-redux'
 import { useParams} from 'react-router-dom';
 import { getWorkById } from './workSlice';
+import { AddContribution } from '../contributions/AddContribution';
 
 export const SingleWorkPage = () => {
 
@@ -17,7 +18,8 @@ export const SingleWorkPage = () => {
 */
     return(
         <>
-            {work ? <p>{work.genre}</p> : <p>Nope!</p>}       
+            {work ? <p>{work.genre}</p> : <p>Nope!</p>}
+            < AddContribution />      
         </>
     )
 }
