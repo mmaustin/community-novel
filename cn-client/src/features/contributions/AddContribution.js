@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { createContribution} from './contributionSlice';
 
-export const AddContribution = () => {
+export const AddContribution = ({work}) => {
 
 
 
     return(
         <>
-            <p>Show me the way!</p>
+            <p>{work.id}</p>
         </>
     )
 }

@@ -4,11 +4,11 @@ class WorksController < ApplicationController
 
     def index
         works = Work.all
-        render json: works.to_json(only: [:id, :title, :genre, :contribution_number], :include => {:contributions => {only: [:id, :author_id]}})
+        render json: works.to_json(only: [:id, :title, :genre, :contribution_number, :author_id], :include => {:contributions => {only: [:id, :author_id]}})
     end
 
     def show
-        render json: @work.to_json(only: [:id, :title, :genre, :contribution_number], :include => {:contributions => {only: [:id, :author_id]}})
+        render json: @work.to_json(only: [:id, :title, :genre, :contribution_number, :author_id], :include => {:contributions => {only: [:id, :author_id]}})
     end
 
     def create

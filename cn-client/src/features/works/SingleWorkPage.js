@@ -19,7 +19,7 @@ export const SingleWorkPage = () => {
     return(
         <>
             {work ? <p>{work.genre}</p> : <p>Nope!</p>}
-            < AddContribution />      
+            < AddContribution work={work} />      
         </>
     )
 }
