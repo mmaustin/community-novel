@@ -37,6 +37,17 @@ const contributionSlice = createSlice({
       state.status = 'failed'
       state.error = action.error.message
     })
+    .addCase(createContribution.pending, (state, action) => {
+      state.status = 'loading'
+    })
+    .addCase(createContribution.fulfilled, (state, action) => {
+      state.status = 'succeeded'
+      state.contributions.push(action.payload)
+    })
+    .addCase(createContribution.rejected, (state, action) => {
+      state.status = 'failed'
+      state.error = action.error.message
+    })
   }
 })
 
