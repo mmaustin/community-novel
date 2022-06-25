@@ -9,6 +9,13 @@ export const fetchContributions = createAsyncThunk(
     return res.data;
   }
 );
+export const createContribution = createAsyncThunk(
+  "contribution/create",
+  async ({ contribution }) => {
+    const res = await DataServiceC.create(contribution);
+    return res.data;
+  }
+);
 
 const contributionSlice = createSlice({
   name: 'contributions',
