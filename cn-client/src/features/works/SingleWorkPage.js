@@ -25,7 +25,9 @@ export const SingleWorkPage = () => {
         <>
             {work ? <p>{work.genre}</p> : <p>Nope!</p>}
             {contributionsDisplay}
-            < AddContribution work={work} />    
+            { work.contributions.length < work.contribution_number &&
+                < AddContribution work={work} />
+            }
         </>
     )
 }
