@@ -28,7 +28,7 @@ export const AddContribution = ({work}) => {
             setAddRequestStatus('idle')
           }
         }
-        navigate(`/get-work/${work.id}`);        
+        navigate(`/`);        
       }
 
     return(
