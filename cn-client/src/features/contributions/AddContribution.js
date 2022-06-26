@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createContribution} from './contributionSlice';
 
 export const AddContribution = ({work}) => {
@@ -8,6 +9,7 @@ export const AddContribution = ({work}) => {
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     
     const onTextChanged = (e) => setText(e.target.value);
 
@@ -26,11 +28,12 @@ export const AddContribution = ({work}) => {
             setAddRequestStatus('idle')
           }
         }
+        navigate(`/get-work/${work.id}`);        
       }
 
     return(
         <section>
-            <h2>Add an Author</h2>
+            <h2>Add a Contribution</h2>
             <form>
             <label htmlFor="contribution">Contribution:</label>
             <textarea
