@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import { createContribution} from './contributionSlice';
 
 export const AddContribution = ({work}) => {
@@ -9,7 +9,7 @@ export const AddContribution = ({work}) => {
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     
     const onTextChanged = (e) => setText(e.target.value);
 
@@ -28,7 +28,7 @@ export const AddContribution = ({work}) => {
             setAddRequestStatus('idle')
           }
         }
-        navigate(`/`);        
+        //navigate(`/`);        
       }
 
     return(
