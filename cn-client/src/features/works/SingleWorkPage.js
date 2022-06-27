@@ -15,6 +15,7 @@ export const SingleWorkPage = () => {
     const work = useSelector(state => getWorkById(state, workId));
     const contribs = useSelector(state => state.contributions.contributions);
     const contribsStatus = useSelector(state => state.contributions.status);
+    const workContribs = contribs.filter(c => c.work_id === work.id);
 
     useEffect(() => {
         if (contribsStatus === 'idle') {
@@ -23,7 +24,7 @@ export const SingleWorkPage = () => {
     }, [contribsStatus, dispatch])
 
     if (contribsStatus === 'succeeded'){
-        console.log(contribs);
+        console.log(workContribs);
     }
 
     let contributionsDisplay;
