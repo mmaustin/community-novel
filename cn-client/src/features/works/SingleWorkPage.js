@@ -24,13 +24,22 @@ export const SingleWorkPage = () => {
     }, [contribsStatus, dispatch])
 
     if (contribsStatus === 'succeeded'){
-        console.log(contribs);
+        console.log(workContribs);
     }
 
     let contributionsDisplay;
 
-    if (work.contributions.length > 0) {
+/*    if (work.contributions.length > 0) {
         contributionsDisplay = work.contributions.map((con, i) => {
+        return <div key={i}>
+            <p>{con.text}</p>
+        </div>
+        })
+    }
+*/
+
+    if (workContribs && workContribs.length > 0) {
+        contributionsDisplay = workContribs.map((con, i) => {
         return <div key={i}>
             <p>{con.text}</p>
         </div>
@@ -41,9 +50,12 @@ export const SingleWorkPage = () => {
         <>
             {work ? <p>{work.genre}</p> : <p>Nope!</p>}
             {contributionsDisplay}
-            { work.contributions.length < work.contribution_number &&
+            {/*{ work.contributions.length < work.contribution_number &&
                 < AddContribution work={work} />
-            }
+            }*/}
+            { workContribs.length < work.contribution_number &&
+                < AddContribution work={work} />
+            }            
         </>
     )
 }
