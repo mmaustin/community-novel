@@ -13,12 +13,18 @@ export const SingleWorkPage = () => {
     const workId = parseInt(params.workId);
 
     const work = useSelector(state => getWorkById(state, workId));
-    const contris = useSelector(state => state.contributions.contributions);
-    console.log(contris);
+    const contribs = useSelector(state => state.contributions.contributions);
+    const contribsStatus = useSelector(state => state.contributions.status);
 
     useEffect(() => {
-        dispatch(fetchContributions());
-    })
+        if (contribsStatus === 'idle') {
+            dispatch(fetchContributions());
+        }
+    }, [contribsStatus, dispatch])
+
+    if (contribsStatus === 'succeeded'){
+        console.log(contribs);
+    }
 
     let contributionsDisplay;
 
