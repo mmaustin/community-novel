@@ -24,7 +24,7 @@ export const SingleWorkPage = () => {
     }, [contribsStatus, dispatch])
 
     if (contribsStatus === 'succeeded'){
-        console.log(workContribs);
+        console.log(contribs);
     }
 
     let contributionsDisplay;

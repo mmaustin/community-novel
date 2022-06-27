@@ -4,11 +4,11 @@ class ContributionsController < ApplicationController
 
     def index
         contributions = Contribution.all
-        render json: contributions.to_json(only: [:id, :text])
+        render json: contributions.to_json(only: [:id, :text, :author_id, :work_id])
     end
 
     def show
-        render json: @contribution.to_json(only: [:id, :text])
+        render json: @contribution.to_json(only: [:id, :text, :author_id, :work_id])
     end
 
     def create
