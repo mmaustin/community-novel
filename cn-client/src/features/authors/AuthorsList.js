@@ -11,15 +11,14 @@ export const AuthorsList = () => {
     const authors = useSelector(allAuthors);
 
 
-        const content = authors.map((author, i) => {
-            return <div key={i}>
-                <p>{author.name}</p>
-                <AuthorWorks works={author.works}/>
-                {/*<AuthorContributions contributions={author.contributions}/>*/}
-                <Link to={`/get-author/${author.id}`} className="author-link">Single Author</Link>
-            </div>
-        })
-
+    const content = authors.map((author, i) => {
+        return <div key={i}>
+            <p>{author.name}</p>
+            <AuthorWorks works={author.works}/>
+            {/*<AuthorContributions contributions={author.contributions}/>*/}
+            <Link to={`/get-author/${author.id}`} className="author-link">Single Author</Link>
+        </div>
+    })
 
     return(
         <>
