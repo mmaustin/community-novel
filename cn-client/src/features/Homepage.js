@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAuthors } from './authorSlice';
-import { fetchWorks } from '../works/workSlice';
-import { fetchContributions } from '../contributions/contributionSlice';
+import { fetchAuthors } from './authors/authorSlice';
+import { fetchWorks } from './works/workSlice';
+import { fetchContributions } from './contributions/contributionSlice';
 
 export const Homepage = () => {
 
