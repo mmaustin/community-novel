@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { useSelector, useDispatch} from 'react-redux'
-import { useParams, useLocation} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import { getWorkById } from './workSlice';
 import { AddContribution } from '../contributions/AddContribution';
 import { fetchContributions } from '../contributions/contributionSlice';
@@ -8,7 +8,6 @@ import { fetchContributions } from '../contributions/contributionSlice';
 export const SingleWorkPage = () => {
 
     const dispatch = useDispatch();
-    const location = useLocation();
 
     const params = useParams();
     const workId = parseInt(params.workId);
@@ -23,7 +22,7 @@ export const SingleWorkPage = () => {
         if (contribsStatus === 'idle') {
             dispatch(fetchContributions());
         }
-    }, [contribsStatus, dispatch, location.key])
+    }, [contribsStatus, dispatch])
 
     if (contribsStatus === 'succeeded'){
         console.log(workContribs);
