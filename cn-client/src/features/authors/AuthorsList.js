@@ -12,13 +12,14 @@ export const AuthorsList = () => {
     const dispatch = useDispatch();
     const authors = useSelector(allAuthors);
     const authorsStatus = useSelector(state => state.authors.status);
+    const worksStatus = useSelector(state => state.works.status);
 
     useEffect(() => {
-        if (authorsStatus === 'idle'){
+        if (authorsStatus === 'idle' && worksStatus === 'idle'){
             dispatch(fetchAuthors());
             dispatch(fetchWorks());
         }
-    }, [authorsStatus, dispatch])
+    }, [authorsStatus, worksStatus, dispatch])
 
     let content;
 
