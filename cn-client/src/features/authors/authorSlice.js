@@ -42,7 +42,10 @@ const authorSlice = createSlice({
   name: 'authors',
   initialState,
   reducers: {
-
+    authorsToLowerCase(state, action){
+      const lowerCaseAuthors = action.payload.map(author => author.toLowerCase());
+      state = lowerCaseAuthors;
+    }
   },
 
   extraReducers(builder){
@@ -99,6 +102,8 @@ const authorSlice = createSlice({
     })    
   }
 })
+
+export const {authorsToLowerCase} = authorSlice.actions;
 
 export const allAuthors = state => state.authors.authors;
 
