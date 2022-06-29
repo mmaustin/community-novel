@@ -1,14 +1,22 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import { allAuthors} from './authorSlice';
 import { AuthorWorks } from './AuthorWorks';
+import { authorsToLowerCase } from './authorSlice';
 //import { AuthorContributions } from './AuthorContributions';
 
 import { Link } from 'react-router-dom';
 
 export const AuthorsList = () => {
 
+    const dispatch = useDispatch();
+
     const authors = useSelector(allAuthors);
+
+    const lowerAuthors = () => {
+        dispatch(authorsToLowerCase(authors));
+    }
+    lowerAuthors();
 
 
     const content = authors.map((author, i) => {
