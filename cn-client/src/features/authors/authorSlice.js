@@ -43,8 +43,7 @@ const authorSlice = createSlice({
   initialState,
   reducers: {
     authorsToLowerCase(state, action){
-      const lowerCaseAuthors = action.payload.map(author => author.toLowerCase());
-      state = lowerCaseAuthors;
+      state = action.payload.map(author => author.toLowerCase());
     }
   },
 
