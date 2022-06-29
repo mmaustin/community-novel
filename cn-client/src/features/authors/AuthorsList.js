@@ -9,10 +9,11 @@ import { Link } from 'react-router-dom';
 export const AuthorsList = () => {
 
     const authors = useSelector(allAuthors);
+    const lowercaseAuthors = authors.slice().sort((a,b) => b.name.localeCompare(a.name))
 
 
 
-    const content = authors.map((author, i) => {
+    const content = lowercaseAuthors.map((author, i) => {
         return <div key={i}>
             <p>{author.name}</p>
             <AuthorWorks works={author.works}/>
