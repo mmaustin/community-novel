@@ -42,17 +42,7 @@ const authorSlice = createSlice({
   name: 'authors',
   initialState,
   reducers: {
-    /*authorsToLowerCase(state, action){
-      console.log(action.payload);
-    }*/
-    changeColor(action){
-    const {e} = action.payload
-    if(e.target.style.backgroundColor !== 'red'){
-      e.target.style.backgroundColor = 'red';
-    } else {
-      e.target.style.backgroundColor = 'blue';
-    }    
-  }
+ 
   },
 
   extraReducers(builder){
@@ -110,7 +100,6 @@ const authorSlice = createSlice({
   }
 })
 
-export const {changeColor} = authorSlice.actions;
 
 export const allAuthors = state => state.authors.authors;
 
