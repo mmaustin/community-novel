@@ -51,4 +51,6 @@ const contributionSlice = createSlice({
   }
 })
 
+export const allContributions = state => state.contributions.contributions;
+
 export default contributionSlice.reducer
