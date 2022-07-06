@@ -1,0 +1,10 @@
+.homepage-p {
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 713px) {
+    .homepage-p {
+        font-weight: 400;
+        color: blue;
+    }
+}

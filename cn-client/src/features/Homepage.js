@@ -21,7 +21,7 @@ export const Homepage = () => {
     
     return(
         <>
-            <p>What's the logic for this here homepage</p>
+            <p className='homepage-p'>What's the logic for this here homepage</p>
         </>
     )
 }
