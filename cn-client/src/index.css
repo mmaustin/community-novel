@@ -4,21 +4,16 @@ body {
 }
 
 #navbar {
-    border-bottom: 1px solid blue;
     margin: 0;
     height: 100px;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: wrap;
+    align-items: center;
+    flex-flow: column;
 }
 
 #nav-header {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
 }
 
 
@@ -50,7 +45,11 @@ body {
   }
 
   .dropbtn {
-    margin-top: 20px;
+    margin: 0;
+  }
+
+  .homepage-p {
+    margin-top: 65px;
   }
   
   /* Change color of dropdown links on hover */

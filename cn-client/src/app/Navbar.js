@@ -7,7 +7,7 @@ export const Navbar = () =>{
         <nav id='navbar'>
             <h4 id='nav-header'>Navigate To Authors, Works & Contributions!</h4>
             <div className='dropdown'>
-                <button className='dropbtn'>Menu</button>
+                <div className='button-container'><button className='dropbtn'>Menu</button></div>
                 <div className='dropdown-content'>
                     <Link className='component-link' to='/'>Home Page</Link>
                     <Link className='component-link' to='/all-authors'>The Authors</Link>
