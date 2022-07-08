@@ -4,6 +4,7 @@ body {
 }
 
 #navbar {
+    width: 100%;
     margin: 0;
     height: 100px;
     display: flex;
@@ -14,6 +15,16 @@ body {
 
 #nav-header {
   margin-top: 20px;
+}
+
+.menu-container {
+  border: 1px solid blue;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: wrap;  
 }
 
 
