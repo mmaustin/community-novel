@@ -5,7 +5,7 @@ export const Navbar = () =>{
 
     return(
         <nav id='navbar'>
-            <h4 id='nav-header'>Links to . . .</h4>
+            <h4 id='nav-header'>Navigate To Authors, Works & Contributions!</h4>
             <div className='dropdown'>
                 <button className='dropbtn'>Menu</button>
                 <div className='dropdown-content'>
