@@ -19,7 +19,7 @@ body {
   width: 49%;
   margin-top: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: wrap;  
 }
@@ -29,7 +29,7 @@ body {
   width: 49%;
   margin-top: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: wrap;  
 }

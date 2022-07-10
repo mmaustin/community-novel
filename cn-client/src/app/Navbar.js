@@ -5,7 +5,6 @@ export const Navbar = () =>{
 
     return(
         <nav id='navbar'>
-            <h4 id='nav-header'>Authors, Works, Contributions!</h4>
             <div className='menu-container'>
                 <div className='dropdown'>
                     <button className='dropbtn'>Menu</button>
@@ -17,6 +16,7 @@ export const Navbar = () =>{
                     </div>
                 </div>
             </div>
+            <h4 id='nav-header'>Authors, Works, Contributions!</h4>            
         </nav>
     )
 }
