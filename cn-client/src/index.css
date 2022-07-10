@@ -14,13 +14,17 @@ body {
 }
 
 #nav-header {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;  
 }
 
 .menu-container {
-  border: 1px solid blue;
   width: 100%;
-  margin: 0;
+  margin-top: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -47,8 +51,8 @@ body {
   
   /* Links inside the dropdown */
   .dropdown-content a{
-    color: white;
-    background-color: #04AA6D;
+    color: black;
+    background-color: transparent;
     padding-left: 30px;
     padding-top: 2px;
     text-decoration: none;
@@ -58,13 +62,9 @@ body {
   .dropbtn {
     margin: 0;
   }
-
-  .homepage-p {
-    margin-top: 65px;
-  }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #0e23df;}
+  .dropdown-content a:hover {background-color: grey;}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
@@ -72,3 +72,7 @@ body {
   /* Change the background color of the dropdown button when the dropdown content is shown 
   .dropdown:hover .dropbtn {background-color: #0e23df;} */
 
+
+  .homepage-p {
+    margin-top: 65px;
+  }
