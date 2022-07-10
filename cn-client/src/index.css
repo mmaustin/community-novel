@@ -4,18 +4,20 @@ body {
 }
 
 #navbar {
+  border: 1px solid blue;
   width: 100%;
   margin: 0;
   height: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row;
+  align-items: flex-start;
+  flex-flow: wrap;
 }
 
 #nav-header {
-  width: 100%;
-  margin-top: 20px;
+  border: 1px solid red;
+  width: 49%;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +25,9 @@ body {
 }
 
 .menu-container {
-  width: 100%;
-  margin-top: 0;
+  border: 1px solid black;
+  width: 49%;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
