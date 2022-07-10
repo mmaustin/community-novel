@@ -16,7 +16,8 @@ export const AddAuthorForm = () => {
     const canSave =
     [name, statement].every(Boolean) && addRequestStatus === 'idle'
 
-    const onSaveAuthorClicked = async () => {
+    const onSaveAuthorClicked = async (e) => {
+      e.preventDefault();
         if (canSave) {
           try {
             setAddRequestStatus('pending')
