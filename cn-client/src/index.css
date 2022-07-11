@@ -99,9 +99,16 @@ body {
 
 .author-list-name {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;  
   font-variant: small-caps;
 }
 
 .all-links {
   text-decoration: none;
+}
+
+.work-title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:normal;
+  font-variant: small-caps;  
 }
