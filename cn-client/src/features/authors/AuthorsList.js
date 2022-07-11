@@ -24,8 +24,8 @@ export const AuthorsList = () => {
     return(
         <>
             {content}
-            <Link to={'/all-works'}>All The Works!</Link>
-            <Link to={'/add-author'}>Create Your Author Profile</Link>
+            <div><Link to={'/all-works'}>All The Works!</Link></div>
+            <div><Link to={'/add-author'}>Create Your Author Profile</Link></div>
         </>
     )
 }

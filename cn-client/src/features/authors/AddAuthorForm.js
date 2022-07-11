@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import { useDispatch} from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createAuthor} from './authorSlice';
 
 export const AddAuthorForm = () => {
+
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [statement, setStatement] = useState('');
@@ -30,6 +33,7 @@ export const AddAuthorForm = () => {
             setAddRequestStatus('idle')
           }
         }
+        navigate(`/all-authors`);
       }
 
     return(

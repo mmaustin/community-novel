@@ -37,7 +37,7 @@ export const UpdateAuthor = () => {
             setAddRequestStatus('idle')
           }
         }
-        navigate(`/get-author/${author.id}`);        
+        navigate(`/get-author/${author.id}`);     
       }
 
     return(
