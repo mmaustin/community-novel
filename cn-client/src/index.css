@@ -88,5 +88,11 @@ body {
   }
 
 #author-list-container {
-  
+  border: 1px solid blue;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;    
 }
