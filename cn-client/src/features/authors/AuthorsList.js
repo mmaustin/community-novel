@@ -25,6 +25,7 @@ export const AuthorsList = () => {
         <>
             {content}
             <Link to={'/all-works'}>All The Works!</Link>
+            <Link to={'/add-author'}>Create Your Author Profile</Link>
         </>
     )
 }
