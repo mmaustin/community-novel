@@ -96,3 +96,12 @@ body {
   align-items: center;
   flex-flow: column;    
 }
+
+.author-list-name {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
+}
+
+.all-links {
+  text-decoration: none;
+}
