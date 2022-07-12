@@ -26,8 +26,8 @@ export const AuthorsList = () => {
             <div id='author-list-container'>
                 {content}
                 <div className='bottom-external-links'>
-                    <Link className='all-links' to={'/all-works'}>All The Works!</Link>
-                    <Link className='all-links' to={'/add-author'}>Create Your Author Profile</Link>
+                    <p className='bottom-links'><Link className='all-links' to={'/all-works'}>All The Works!</Link></p>
+                    <p className='bottom-links'><Link className='all-links' to={'/add-author'}>Create Your Author Profile</Link></p>
                 </div>
             </div>
         </>

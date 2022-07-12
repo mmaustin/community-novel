@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 900px;
+  height: 950px;
 }
 
 #root {
@@ -122,11 +122,14 @@ body {
 }
 
 .bottom-external-links {
-  margin-top: 25px;
-  border: 1px solid red;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: column;  
+}
+
+.bottom-links {
+  margin-top: 0;
 }
