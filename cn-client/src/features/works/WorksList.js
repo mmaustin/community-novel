@@ -9,7 +9,7 @@ export const WorksList = () => {
     const theWorks = worksFromStore.map((work, i) => {
         return <div className='work-list-segment' key={i}>
                 <p className='work-title' >{work.title}</p>
-                <Link to={`/get-work/${work.id}`} className="all-links">Single Work</Link>                
+                <Link to={`/get-work/${work.id}`} className="all-links">Read Me!</Link>                
         </div>
     })
 
