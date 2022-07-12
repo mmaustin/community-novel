@@ -7,15 +7,17 @@ export const WorksList = () => {
 
     const worksFromStore = useSelector(allWorks);
     const theWorks = worksFromStore.map((work, i) => {
-        return <div key={i}>
-                <p>{work.title}</p>
-                <Link to={`/get-work/${work.id}`} className="work-link">Single Work</Link>                
+        return <div className='work-list-segment' key={i}>
+                <p className='work-title' >{work.title}</p>
+                <Link to={`/get-work/${work.id}`} className="all-links">Single Work</Link>                
         </div>
     })
 
     return(
         <>
-            {theWorks}
+            <div id='works-container'>
+                {theWorks}
+            </div>
         </>
     )
 }
