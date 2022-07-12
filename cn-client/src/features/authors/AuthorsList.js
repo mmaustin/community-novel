@@ -13,7 +13,7 @@ export const AuthorsList = () => {
     const orderedAuthors = authors.slice().sort((a,b) => a.name.localeCompare(b.name))
 
     const content = orderedAuthors.map((author, i) => {
-        return <div id='author-list-container' key={i}>
+        return <div id='author-list-segment' key={i}>
             <p className='author-list-name'>{author.name}</p>
             <AuthorWorks works={author.works}/>
             {/*<AuthorContributions contributions={author.contributions}/>*/}
@@ -23,9 +23,11 @@ export const AuthorsList = () => {
 
     return(
         <>
-            {content}
-            <div><Link className='all-links' to={'/all-works'}>All The Works!</Link></div>
-            <div><Link className='all-links' to={'/add-author'}>Create Your Author Profile</Link></div>
+            <div id=''>
+                {content}
+                <div><Link className='all-links' to={'/all-works'}>All The Works!</Link></div>
+                <div><Link className='all-links' to={'/add-author'}>Create Your Author Profile</Link></div>
+            </div>
         </>
     )
 }
