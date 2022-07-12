@@ -134,3 +134,21 @@ body {
 .bottom-links {
   margin-top: 0;
 }
+
+#works-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;  
+}
+
+.work-list-segment {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;    
+}
