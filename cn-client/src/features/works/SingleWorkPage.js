@@ -29,35 +29,29 @@ export const SingleWorkPage = () => {
 
     let contributionsDisplay;
 
-/*    if (work.contributions.length > 0) {
-        contributionsDisplay = work.contributions.map((con, i) => {
-        return <div key={i}>
-            <p>{con.text}</p>
-        </div>
-        })
-    }
-*/
-
     if (workContribs && workContribs.length > 0) {
         contributionsDisplay = workContribs.map((con, i) => {
         return <div key={i}>
-            <p>{i}</p>
-            <p>{con.text}</p>
+            <p>{con.text}</p>            
+            <p>{i+1}</p>
         </div>
         })
     }
 
     return(
         <>
-            {work ? <p>{work.title}</p> : <p>Nope!</p>}
-            {work.genre}
-            {contributionsDisplay}
-            {/*{ work.contributions.length < work.contribution_number &&
-                < AddContribution work={work} />
-            }*/}
-            { workContribs.length < work.contribution_number &&
-                < AddContribution work={work} />
-            }       
+            <div>
+                <div>
+                    <p>{work ? <>{work.title}</> : <>Nope!</>}</p>
+                    <p>{work.genre}</p>
+                </div>
+                <div>
+                    {contributionsDisplay}
+                </div>
+                <div>{ workContribs.length < work.contribution_number &&
+                    < AddContribution work={work} />
+                }</div>
+            </div>      
         </>
     )
 }
