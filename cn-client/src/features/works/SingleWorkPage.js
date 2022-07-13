@@ -32,8 +32,8 @@ export const SingleWorkPage = () => {
     if (workContribs && workContribs.length > 0) {
         contributionsDisplay = workContribs.map((con, i) => {
         return <div className='contribution-container' key={i}>
-            <p>{con.text}</p>            
-            <p>{i+1}</p>
+            <p className='contribution-text'>{con.text}</p>            
+            <p className='contribution-number'>{i+1}</p>
         </div>
         })
     }
@@ -42,8 +42,8 @@ export const SingleWorkPage = () => {
         <>
             <div className='work-container'>
                 <div className='work-headers'>
-                    <p>{work ? <>{work.title}</> : <>Nope!</>}</p>
-                    <p>{work.genre}</p>
+                    <p className='work-title'>{work ? <>{work.title}</> : <>Nope!</>}</p>
+                    <p className='work-genre'>{work.genre}</p>
                 </div>
                 <div className='contributions-container'>
                     {contributionsDisplay}
