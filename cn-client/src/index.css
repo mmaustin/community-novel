@@ -146,3 +146,12 @@ body {
   align-items: center;
   flex-flow: column;    
 }
+
+.work-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;   
+}
