@@ -13,7 +13,6 @@ export const SingleWorkPage = () => {
     const workId = parseInt(params.workId);
 
     const work = useSelector(state => getWorkById(state, workId));
-    console.log(work)
     const contribs = useSelector(state => state.contributions.contributions);
     const contribsStatus = useSelector(state => state.contributions.status);
     const workContribs = contribs.filter(c => c.work_id === work.id);
@@ -42,6 +41,7 @@ export const SingleWorkPage = () => {
     if (workContribs && workContribs.length > 0) {
         contributionsDisplay = workContribs.map((con, i) => {
         return <div key={i}>
+            <p>{i}</p>
             <p>{con.text}</p>
         </div>
         })
@@ -49,7 +49,8 @@ export const SingleWorkPage = () => {
 
     return(
         <>
-            {work ? <p>{work.genre}</p> : <p>Nope!</p>}
+            {work ? <p>{work.title}</p> : <p>Nope!</p>}
+            {work.genre}
             {contributionsDisplay}
             {/*{ work.contributions.length < work.contribution_number &&
                 < AddContribution work={work} />
