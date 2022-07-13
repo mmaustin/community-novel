@@ -42,8 +42,8 @@ export const SingleWorkPage = () => {
         <>
             <div className='work-container'>
                 <div className='work-headers'>
-                    <p className='work-title'>{work ? <>{work.title}</> : <>Nope!</>}</p>
-                    <p className='work-genre'>{work.genre}</p>
+                    <p className='work-title'>TITLE: {work ? <>{work.title}</> : <>Nope!</>}</p>
+                    <p className='work-genre'>GENRE: {work.genre}</p>
                 </div>
                 <div className='contributions-container'>
                     {contributionsDisplay}
