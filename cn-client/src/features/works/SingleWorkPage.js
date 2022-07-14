@@ -37,7 +37,7 @@ export const SingleWorkPage = () => {
             contributionAuthor = authors.find(author => author.id === con.author_id)
         return <div className='contribution-container' key={i}>            
             <p className='contribution-text'>{con.text}</p>
-            <p>{contributionAuthor.name}</p>                     
+            <p className='contribution-author'>{contributionAuthor.name}</p>                     
         </div>
         })
     }  
