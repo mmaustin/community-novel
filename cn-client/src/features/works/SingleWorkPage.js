@@ -35,10 +35,9 @@ export const SingleWorkPage = () => {
     if (workContribs && workContribs.length > 0) {
         contributionsDisplay = workContribs.map((con, i) => {
             contributionAuthor = authors.find(author => author.id === con.author_id)
-        return <div className='contribution-container' key={i}>
-            <p className='contribution-text'>{con.text}</p>            
-            <p className='contribution-number'>{i+1}</p>
-            <p>{contributionAuthor.name}</p>            
+        return <div className='contribution-container' key={i}>            
+            <p className='contribution-text'>{con.text}</p>
+            <p>{contributionAuthor.name}</p>                     
         </div>
         })
     }  

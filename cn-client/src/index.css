@@ -172,4 +172,5 @@ body {
 .contribution-container{
   border: 1px solid red;
   margin: 0;
+  align-items: flex-start;
 }
