@@ -147,8 +147,8 @@ body {
   flex-flow: column;    
 }
 
-.work-container, .work-headers, .contribution-containers,
-.contributions-container {
+.work-container, .work-headers, .contributions-container,
+.contribution-container {
   margin-top: 30px;
   width: 100%;
   display: flex;

@@ -16,6 +16,7 @@ export const SingleWorkPage = () => {
     const contribs = useSelector(state => state.contributions.contributions);
     const contribsStatus = useSelector(state => state.contributions.status);
     const workContribs = contribs.filter(c => c.work_id === work.id);
+    const authors = useSelector(state => state.authors.authors)
 
     useEffect(() => {
         if (contribsStatus === 'idle') {
@@ -23,20 +24,24 @@ export const SingleWorkPage = () => {
         }
     }, [contribsStatus, dispatch])
 
-    if (contribsStatus === 'succeeded'){
+    /*if (contribsStatus === 'succeeded'){
         console.log(workContribs);
-    }
+    }*/
 
     let contributionsDisplay;
+    let contributionAuthor;
+
 
     if (workContribs && workContribs.length > 0) {
         contributionsDisplay = workContribs.map((con, i) => {
+            contributionAuthor = authors.find(author => author.id === con.author_id)
         return <div className='contribution-container' key={i}>
             <p className='contribution-text'>{con.text}</p>            
             <p className='contribution-number'>{i+1}</p>
+            <p>{contributionAuthor.name}</p>            
         </div>
         })
-    }
+    }  
 
     return(
         <>
