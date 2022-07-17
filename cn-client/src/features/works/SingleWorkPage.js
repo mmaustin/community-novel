@@ -52,9 +52,9 @@ export const SingleWorkPage = () => {
                 <div className='contributions-container'>
                     {contributionsDisplay}
                 </div>
-                <div className='add-contribution-container'>{ workContribs.length < work.contribution_number &&
+                { workContribs.length < work.contribution_number &&
                     < AddContribution work={work} authors={authors} />
-                }</div>
+                }
             </div>      
         </>
     )

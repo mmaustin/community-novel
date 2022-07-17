@@ -148,13 +148,18 @@ body {
 }
 
 .work-container, .work-headers, .contributions-container,
-.contribution-container {
+.contribution-container, .add-contribution-container {
   margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;   
+}
+
+.add-contribution-container{
+  border: 1px solid black;
+  flex-flow: row wrap;
 }
 
 .work-headers {
