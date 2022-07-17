@@ -35,18 +35,18 @@ export const AddContribution = ({work, authors}) => {
 
     return(
         <section className='add-contribution-container'>
-            <h2>Add a Contribution</h2>
+            <h2 className='contribution-header'>Add A Contribution Below</h2>
             <form>
-            <label htmlFor="contribution">Contribution:</label>
-            <textarea
-                id="contribution"
-                name="contribution"
-                value={text}
-                onChange={onTextChanged}
-            ></textarea>
-            <button type="button" onClick={saveContribution} disabled={!canSave}>
-                Save Contribution
-            </button>
+              <label htmlFor="contribution"></label>
+              <textarea
+                  id="contribution"
+                  name="contribution"
+                  value={text}
+                  onChange={onTextChanged}
+              ></textarea>
+              <button className='contribution-button' type="button" onClick={saveContribution} disabled={!canSave}>
+                  Save Contribution
+              </button>
             </form>
       </section>
     )

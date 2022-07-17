@@ -159,6 +159,7 @@ body {
 
 .add-contribution-container{
   border: 1px solid black;
+  margin:0;
   flex-flow: row wrap;
 }
 
