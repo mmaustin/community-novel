@@ -34,7 +34,7 @@ export const AddContribution = ({work, authors}) => {
       }
 
     return(
-        <section>
+        <section className='add-contribution-container'>
             <h2>Add a Contribution</h2>
             <form>
             <label htmlFor="contribution">Contribution:</label>
