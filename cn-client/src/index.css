@@ -158,9 +158,12 @@ body {
 }
 
 .add-contribution-container, .contribution-form {
-  border: 1px solid black;
   margin:0;
   flex-flow: column;
+}
+
+.contribution-form{
+  height: 220px;
 }
 
 .work-headers {
@@ -171,12 +174,10 @@ body {
 }
 
 .contributions-container {
-  border: 1px solid blue;
   margin-top: 20px;
 }
 
 .contribution-container{
-  border: 1px solid red;
   margin: 0;
   align-items: flex-start;
 }
@@ -186,7 +187,12 @@ body {
   font-style: italic;
 }
 
-.contribution-button, #contribution {
-  border: 1px solid red;
+.contribution-button {
+  margin-top: 15px;
+}
+
+#contribution {
+  height: 160px;
+  width: 75%;
 }
 
