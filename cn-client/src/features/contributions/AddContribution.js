@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 //import { useNavigate } from 'react-router-dom';
 import { createContribution} from './contributionSlice';
 
-export const AddContribution = ({work}) => {
+export const AddContribution = ({work, authors}) => {
+
+    //console.log(authors[0].name);
 
     const [text, setText] = useState('');
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
