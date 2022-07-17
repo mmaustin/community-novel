@@ -40,7 +40,7 @@ export const SingleWorkPage = () => {
             <p className='contribution-author'>{contributionAuthor.name}</p>                     
         </div>
         })
-    }  
+    }
 
     return(
         <>
@@ -53,7 +53,7 @@ export const SingleWorkPage = () => {
                     {contributionsDisplay}
                 </div>
                 <div className='add-contribution-container'>{ workContribs.length < work.contribution_number &&
-                    < AddContribution work={work} />
+                    < AddContribution work={work} authors={authors} />
                 }</div>
             </div>      
         </>
