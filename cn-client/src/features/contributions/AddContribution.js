@@ -36,7 +36,7 @@ export const AddContribution = ({work, authors}) => {
     return(
         <section className='add-contribution-container'>
             <h2 className='contribution-header'>Add A Contribution Below</h2>
-            <form>
+            <form className='contribution-form'>
               <label htmlFor="contribution"></label>
               <textarea
                   id="contribution"
