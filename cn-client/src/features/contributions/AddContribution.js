@@ -20,6 +20,8 @@ export const AddContribution = ({work, authors}) => {
       return <option key={i} value={author.id}>{author.name}</option>
     })
 
+    console.log(authorId)
+
     const canSave =
     [text].every(Boolean) && addRequestStatus === 'idle'
 
@@ -49,6 +51,10 @@ export const AddContribution = ({work, authors}) => {
                   value={text}
                   onChange={onTextChanged}
               ></textarea>
+              <select value={authorId} onChange={onSelectAuthorId}>
+                <option value=""></option>
+                {selectAuthor}
+              </select>
               <button className='contribution-button' type="button" onClick={saveContribution} disabled={!canSave}>
                   Save Contribution
               </button>
