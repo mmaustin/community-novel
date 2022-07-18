@@ -12,10 +12,13 @@ export const AddContribution = ({work, authors}) => {
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
-    //const navigate = useNavigate();
     
     const onTextChanged = (e) => setText(e.target.value);
     const onSelectAuthorId = (e) => setAuthorId(e.target.value);
+
+    const selectAuthor = authors.map((author, i)=>{
+      return <option key={i} value={author.id}>{author.name}</option>
+    })
 
     const canSave =
     [text].every(Boolean) && addRequestStatus === 'idle'
