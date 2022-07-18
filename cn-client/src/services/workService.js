@@ -4,8 +4,8 @@ class DataServiceW {
     getAll() {
         return http.get("/works");
     }
-    create(band) {
-        return http.post("/works", band);
+    create(work) {
+        return http.post("/works", work);
     }
     get(id) {
         return http.get(`/works/${id}`);

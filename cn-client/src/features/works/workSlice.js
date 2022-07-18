@@ -11,8 +11,8 @@ export const fetchWorks = createAsyncThunk(
 );
 export const createWork = createAsyncThunk(
   'work/create',
-  async ({id}) => {
-    const res = await DataServiceW.create(id);
+  async ({work}) => {
+    const res = await DataServiceW.create(work);
     return res.data;
   }
 );

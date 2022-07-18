@@ -8,7 +8,7 @@ export const AddContribution = ({work, authors}) => {
     //console.log(authors[0].name);
 
     const [text, setText] = useState('');
-    const [authorId, setAuthorId] = useState('');
+    const [authorId, setAuthorId] = useState(0);
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
