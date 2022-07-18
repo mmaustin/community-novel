@@ -8,12 +8,14 @@ export const AddContribution = ({work, authors}) => {
     //console.log(authors[0].name);
 
     const [text, setText] = useState('');
+    const [authorId, setAuthorId] = useState('');
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
     //const navigate = useNavigate();
     
     const onTextChanged = (e) => setText(e.target.value);
+    const onSelectAuthorId = (e) => setAuthorId(e.target.value);
 
     const canSave =
     [text].every(Boolean) && addRequestStatus === 'idle'
