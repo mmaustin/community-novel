@@ -191,6 +191,10 @@ body {
   margin-top: 15px;
 }
 
+#contribution, .select-author {
+  border: 2px solid black;
+}
+
 #contribution {
   height: 160px;
   width: 75%;
