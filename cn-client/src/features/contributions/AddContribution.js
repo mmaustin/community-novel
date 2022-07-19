@@ -51,7 +51,7 @@ export const AddContribution = ({work, authors}) => {
                   value={text}
                   onChange={onTextChanged}
               ></textarea>
-              <select value={authorId} onChange={onSelectAuthorId}>
+              <select className='select-author' value={authorId} onChange={onSelectAuthorId}>
                 <option value=""></option>
                 {selectAuthor}
               </select>
