@@ -38,8 +38,8 @@ export const AddAuthorForm = () => {
 
     return(
         <section className='add-author-container'>
-            <h2 className='add-author-header'>Add an Author</h2>
             <form className='add-author-form'>
+              <h2 className='add-author-header'>Add an Author</h2>
               <label htmlFor="author-name">Author Name:</label>
               <input
                   type="text"

@@ -211,8 +211,7 @@ body {
 
 /*Add Author Component*/
 
-.add-author-container {
-  border: 1px solid red;
+.add-author-container, .add-author-form {
   margin: 0;
   width: 90%;
   height: 300px;
