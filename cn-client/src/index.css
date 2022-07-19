@@ -208,3 +208,16 @@ body {
 .select-author-header {
   margin-top: 10px;
 }
+
+/*Add Author Component*/
+
+.add-author-container {
+  border: 1px solid red;
+  margin: 0;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;   
+}
