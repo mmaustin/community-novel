@@ -1,6 +1,7 @@
 body {
+  border: 3px solid blue;
   margin: 0;
-  height: 950px;
+  height: auto;
 }
 
 #root {
@@ -201,5 +202,9 @@ body {
 }
 
 .select-author{
-  margin-top: 20px;
+  margin: 0;
+}
+
+.select-author-header {
+  margin-top: 10px;
 }
