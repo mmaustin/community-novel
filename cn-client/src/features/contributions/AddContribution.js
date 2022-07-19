@@ -52,6 +52,7 @@ export const AddContribution = ({work, authors}) => {
                   value={text}
                   onChange={onTextChanged}
               ></textarea>
+              <h4 className='select-author-heading'>Select Your Name</h4>
               <select className='select-author' value={authorId} onChange={onSelectAuthorId}>
                 <option value=""></option>
                 {selectAuthor}
