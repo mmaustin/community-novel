@@ -8,7 +8,7 @@ export const AddContribution = ({work, authors}) => {
     //console.log(authors[0].name);
 
     const [text, setText] = useState('');
-    const [authorId, setAuthorId] = useState(0);
+    const [authorId, setAuthorId] = useState('');
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
     
     const dispatch = useDispatch();
@@ -34,7 +34,8 @@ export const AddContribution = ({work, authors}) => {
           } catch (err) {
             console.error('Failed to save the contribution: ', err)
           } finally {
-            setAddRequestStatus('idle')
+            setAddRequestStatus('idle');
+            setAuthorId('');
           }
         }
         //navigate(`/`);        
