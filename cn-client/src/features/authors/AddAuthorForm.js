@@ -37,27 +37,27 @@ export const AddAuthorForm = () => {
       }
 
     return(
-        <section>
-            <h2>Add an Author</h2>
-            <form>
-            <label htmlFor="author-name">Author Name:</label>
-            <input
-                type="text"
-                id="author-name"
-                name="author-name"
-                value={name}
-                onChange={onNameChanged}
-            />
-            <label htmlFor="author-statement">Statement:</label>
-            <textarea
-                id="author-statement"
-                name="statement"
-                value={statement}
-                onChange={onStatementChanged}
-            ></textarea>
-            <button type="button" onClick={onSaveAuthorClicked} disabled={!canSave}>
-                Save Author
-            </button>
+        <section className='add-author-container'>
+            <h2 className='add-author-header'>Add an Author</h2>
+            <form className='add-author-form'>
+              <label htmlFor="author-name">Author Name:</label>
+              <input
+                  type="text"
+                  id="author-name"
+                  name="author-name"
+                  value={name}
+                  onChange={onNameChanged}
+              />
+              <label htmlFor="author-statement">Statement:</label>
+              <textarea
+                  id="author-statement"
+                  name="statement"
+                  value={statement}
+                  onChange={onStatementChanged}
+              ></textarea>
+              <button type="button" onClick={onSaveAuthorClicked} disabled={!canSave}>
+                  Save Author
+              </button>
             </form>
       </section>
     )
