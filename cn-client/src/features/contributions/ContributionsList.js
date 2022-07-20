@@ -7,8 +7,11 @@ export const ContributionsList = () => {
     const contributions = useSelector(allContributions);
 
     const contributionsList = contributions.map((cont, i) => {
-        return <p key={i}>{cont.text}</p>
-    })
+        console.log(cont);
+        return <div key={i}>
+            <p>{cont.text}</p>
+        </div>
+})
 
     return(
         <div>
