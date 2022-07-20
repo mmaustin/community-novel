@@ -40,7 +40,7 @@ export const AddAuthorForm = () => {
         <section className='add-author-container'>
             <form className='add-author-form'>
               <h2 className='add-author-header'>Add an Author</h2>
-              <label htmlFor="author-name">Author Name:</label>
+              <label className='author-form-label-one' htmlFor="author-name">Author Name:</label>
               <input
                   type="text"
                   id="author-name"
@@ -48,7 +48,7 @@ export const AddAuthorForm = () => {
                   value={name}
                   onChange={onNameChanged}
               />
-              <label htmlFor="author-statement">Statement:</label>
+              <label className='author-form-label-two' htmlFor="author-statement">Personal Statement:</label>
               <textarea
                   id="author-statement"
                   name="statement"

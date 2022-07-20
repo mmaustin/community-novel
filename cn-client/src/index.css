@@ -212,7 +212,6 @@ body {
 /*Add Author Component*/
 
 .add-author-container, .add-author-form {
-  border: 1px solid red;
   margin-top: 35px;
   width: 90%;
   height: 250px;
@@ -225,6 +224,10 @@ body {
 .add-author-form {
   margin: 0;
   height: 100%;
-  width: 60%;
+  width: 100%;
   background-color: aqua;
+}
+
+.author-form-label-one, .author-form-label-two {
+  margin-top: 10px;
 }
