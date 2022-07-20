@@ -205,14 +205,18 @@ body {
   margin: 0;
 }
 
+/*Add Author Component*/
+
 .add-author-header, .author-form-label-one, .author-form-label-two,
 #author-name, #author-statement {
-  border: 1px solid red;
   margin: 0px;
   width: 80%;
 }
 
-/*Add Author Component*/
+.add-author-header {
+  width: auto;
+  margin-top: 20px;
+}
 
 .add-author-container, .add-author-form {
   margin-top: 35px;
@@ -232,5 +236,15 @@ body {
 }
 
 .author-form-label-one, .author-form-label-two {
-  margin-top: 10px;
+  width: auto;
+  margin-top: 15px;
+}
+
+#author-name {
+  width: 50%;
+  height: 20px;
+}
+
+#author-statement {
+  height: 200px;
 }
