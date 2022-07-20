@@ -205,8 +205,11 @@ body {
   margin: 0;
 }
 
-.select-author-header {
-  margin-top: 10px;
+.add-author-header, .author-form-label-one, .author-form-label-two,
+#author-name, #author-statement {
+  border: 1px solid red;
+  margin: 0px;
+  width: 80%;
 }
 
 /*Add Author Component*/
@@ -214,9 +217,9 @@ body {
 .add-author-container, .add-author-form {
   margin-top: 35px;
   width: 90%;
-  height: 250px;
+  height: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: column;   
 }
