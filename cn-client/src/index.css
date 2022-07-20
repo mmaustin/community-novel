@@ -212,11 +212,19 @@ body {
 /*Add Author Component*/
 
 .add-author-container, .add-author-form {
-  margin: 0;
+  border: 1px solid red;
+  margin-top: 35px;
   width: 90%;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;   
+}
+
+.add-author-form {
+  margin: 0;
+  height: 100%;
+  width: 60%;
+  background-color: aqua;
 }
