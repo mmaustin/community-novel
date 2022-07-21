@@ -51,6 +51,9 @@ const contributionSlice = createSlice({
   }
 })
 
+export const getContributionById = (state, contributionId) => 
+  state.contributions.contributions.find(contribution => contribution.id === contributionId)
+
 export const allContributions = state => state.contributions.contributions;
 
 export default contributionSlice.reducer
