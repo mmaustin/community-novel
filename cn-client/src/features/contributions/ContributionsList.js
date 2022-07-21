@@ -16,7 +16,7 @@ export const ContributionsList = () => {
     const contributionsList = contributions.map((cont, i) => {
         contributionAuthor = authors.find(author => author.id === cont.author_id);
         contributionWork = works.find(work => work.id === cont.work_id);   
-        return <div className='contribution-container' key={i}>
+        return <div className='contribution-list-container' key={i}>
             <p className='contribution-text'>{cont.text}</p>
             <p className='contribution-author'>{contributionAuthor.name}</p>
             <p className='contribution-work'>{contributionWork.title}</p>
@@ -24,7 +24,7 @@ export const ContributionsList = () => {
 })
 
     return(
-        <div className='contributions-container'>
+        <div className='contributions-list-container'>
             {contributionsList}
         </div>
     )
