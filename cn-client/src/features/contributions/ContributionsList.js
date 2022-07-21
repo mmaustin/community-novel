@@ -16,15 +16,15 @@ export const ContributionsList = () => {
     const contributionsList = contributions.map((cont, i) => {
         contributionAuthor = authors.find(author => author.id === cont.author_id);
         contributionWork = works.find(work => work.id === cont.work_id);   
-        return <div key={i}>
-            <p>{cont.text}</p>
-            <p>{contributionAuthor.name}</p>
-            <p>{contributionWork.title}</p>
+        return <div className='contribution-container' key={i}>
+            <p className='contribution-text'>{cont.text}</p>
+            <p className='contribution-author'>{contributionAuthor.name}</p>
+            <p className='contribution-work'>{contributionWork.title}</p>
         </div>
 })
 
     return(
-        <div>
+        <div className='contributions-container'>
             {contributionsList}
         </div>
     )
