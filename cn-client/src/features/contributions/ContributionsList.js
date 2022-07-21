@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { allContributions } from './contributionSlice';
+import { allWorks } from '../works/workSlice';
 
 export const ContributionsList = () => {
 
