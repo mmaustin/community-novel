@@ -252,9 +252,14 @@ body {
 
 .contributions-list-container, .contribution-list-container {
   border: 1px solid blue;
+  width: 100%;
   margin: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-flow: column;  
+}
+
+.contribution-list-container {
+  width: 60%;
 }
