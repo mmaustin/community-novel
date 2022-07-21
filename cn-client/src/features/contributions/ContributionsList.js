@@ -18,8 +18,8 @@ export const ContributionsList = () => {
         contributionWork = works.find(work => work.id === cont.work_id);   
         return <div className='contribution-list-container' key={i}>
             <p className='contribution-text'>{cont.text}</p>
-            <p className='contribution-author'>{contributionAuthor.name}</p>
-            <p className='contribution-work'>{contributionWork.title}</p>
+            <p className='contribution-author'>Author: {contributionAuthor.name}</p>
+            <p className='contribution-work'>Work: {contributionWork.title}</p>
         </div>
 })
 

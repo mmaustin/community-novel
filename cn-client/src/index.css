@@ -187,6 +187,10 @@ body {
   font-style: italic;
 }
 
+.contribution-text {
+  font-style: normal;
+}
+
 .contribution-button {
   margin-top: 15px;
 }
@@ -262,4 +266,5 @@ body {
 
 .contribution-list-container {
   width: 60%;
+  align-items: flex-start;
 }
