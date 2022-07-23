@@ -8,13 +8,14 @@ export const SingleContribution = () => {
     const params = useParams();
     const contributionId = parseInt(params.contributionId);
 
-    const contribution = useSelector(state => getContributionById(state, contributionId));
-    console.log(contribution);   
+    const foundContribution = useSelector(state => getContributionById(state, contributionId));
+    
+    const contribution = foundContribution.text
 
 
     return(
         <>
-            <p>Papa don't take no mess!</p>
+            <p>{contribution}</p>
         </>
     )
 }
