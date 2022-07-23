@@ -5,6 +5,12 @@ import { getContributionById } from './contributionSlice';
 
 export const SingleContribution = () => {
 
+    const params = useParams();
+    const contributionId = parseInt(params.contributionId);
+
+    const contribution = useSelector(state => getContributionById(state, contributionId));
+    console.log(contribution);   
+
 
     return(
         <>
