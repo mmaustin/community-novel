@@ -1,30 +1,30 @@
-import React, {useEffect} from 'react'
-import { useSelector, useDispatch} from 'react-redux'
+import React from 'react'
+import { useSelector} from 'react-redux'
 import { useParams} from 'react-router-dom';
 import { getWorkById } from './workSlice';
 import { AddContribution } from '../contributions/AddContribution';
-import { fetchContributions } from '../contributions/contributionSlice';
+//import { fetchContributions } from '../contributions/contributionSlice';
 
 export const SingleWorkPage = () => {
 
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
     const params = useParams();
     const workId = parseInt(params.workId);
 
     const work = useSelector(state => getWorkById(state, workId));
     const contribs = useSelector(state => state.contributions.contributions);
-    const contribsStatus = useSelector(state => state.contributions.status);
+    //const contribsStatus = useSelector(state => state.contributions.status);
     const workContribs = contribs.filter(c => c.work_id === work.id);
     const authors = useSelector(state => state.authors.authors)
 
-    useEffect(() => {
+    /*useEffect(() => {
         if (contribsStatus === 'idle') {
             dispatch(fetchContributions());
         }
     }, [contribsStatus, dispatch])
 
-    /*if (contribsStatus === 'succeeded'){
+    if (contribsStatus === 'succeeded'){
         console.log(workContribs);
     }*/
 
