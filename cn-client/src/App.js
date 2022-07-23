@@ -9,6 +9,7 @@ import { UpdateAuthor } from './features/authors/UpdateAuthor';
 import { WorksList } from './features/works/WorksList';
 import { SingleWorkPage } from './features/works/SingleWorkPage';
 import { ContributionsList } from './features/contributions/ContributionsList';
+import { SingleContribution } from './features/contributions/SingleContribution';
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
           <Route exact path='/get-author/:authorId' element={<SingleAuthorPage />} />
           <Route exact path='/update-author/:authorId' element={<UpdateAuthor />} />
           <Route exact path='/get-work/:workId' element={<SingleWorkPage />} />
-          <Route exact path='/all-contributions' element={< ContributionsList />} />          
+          <Route exact path='/all-contributions' element={< ContributionsList />} />
+          <Route exact path='/get-contribution/:contributionId' element={< SingleContribution />} />       
         </Routes>
     </Router>
   );

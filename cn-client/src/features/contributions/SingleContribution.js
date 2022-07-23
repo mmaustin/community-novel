@@ -14,6 +14,7 @@ export const SingleContribution = () => {
 
     return(
         <>
+            <p>Papa don't take no mess!</p>
         </>
     )
 }
