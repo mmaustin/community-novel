@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { allContributions } from './contributionSlice';
 import { allWorks } from '../works/workSlice';
+import { Link } from 'react-router-dom';
 
 export const ContributionsList = () => {
 
@@ -20,6 +21,7 @@ export const ContributionsList = () => {
             <p className='contribution-text'>{cont.text}</p>
             <p className='contribution-author'>Author: {contributionAuthor.name}</p>
             <p className='contribution-work'>Work: {contributionWork.title}</p>
+            <Link to={`/get-contribution/${cont.id}`} className="all-links">Contribution Here!</Link>            
         </div>
 })
 
