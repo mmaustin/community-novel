@@ -41,18 +41,18 @@ export const UpdateAuthor = () => {
       }
 
     return(
-        <section>
-            <h2>Update Author Information</h2>
-            <form>
-            <label htmlFor="authorName">Author Name:</label>
+        <section id='update-author-container'>
+            <h2 className='global-header' >Update Author Information</h2>
+            <form className='update-author-form'>
+            <label htmlFor="author-name">Author Name:</label>
             <input
                 type="text"
-                id="player-name"
-                name="playerName"
+                id="author-name"
+                name="authorName"
                 value={name}
                 onChange={onNameChanged}
             />
-            <label htmlFor="statement">Statement:</label>
+            <label htmlFor="author-statement">Statement:</label>
             <input
                 type="text"
                 id="author-statement"
@@ -60,7 +60,7 @@ export const UpdateAuthor = () => {
                 value={statement}
                 onChange={onStatementChanged}
             />
-            <button type="button" onClick={onUpdateAuthorClicked} disabled={!canSave}>
+            <button className='update-author-button' type="button" onClick={onUpdateAuthorClicked} disabled={!canSave}>
                 Update Author
             </button>
             </form>
