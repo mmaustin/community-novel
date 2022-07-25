@@ -242,7 +242,8 @@ body {
   background-color: aqua;
 }
 
-.author-form-label-one, .author-form-label-two {
+.author-form-label-one, .author-form-label-two,
+.update-author-button {
   width: auto;
   margin-top: 15px;
 }
@@ -276,7 +277,6 @@ body {
 /* Update Author */
 
 #update-author-container, .update-author-form {
-  border: 1px solid blue;
   margin-top: 20px;
   width: 100%;
   height: auto;
@@ -291,5 +291,6 @@ body {
   width: 80%;
   height: 350px;
   justify-content: flex-start;
+  background-color: aqua;  
 }
 
