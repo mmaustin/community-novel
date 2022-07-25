@@ -44,7 +44,7 @@ export const UpdateAuthor = () => {
         <section id='update-author-container'>
             <h2 className='global-header' >Update Author Information</h2>
             <form className='update-author-form'>
-            <label htmlFor="author-name">Author Name:</label>
+            <label className='author-form-label-one' htmlFor="author-name">Author Name:</label>
             <input
                 type="text"
                 id="author-name"
@@ -52,7 +52,7 @@ export const UpdateAuthor = () => {
                 value={name}
                 onChange={onNameChanged}
             />
-            <label htmlFor="author-statement">Statement:</label>
+            <label className='author-form-label-two' htmlFor="author-statement">Statement:</label>
             <input
                 type="text"
                 id="author-statement"
