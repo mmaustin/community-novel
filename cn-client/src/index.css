@@ -261,11 +261,22 @@ body {
 
 #author-page-container, #author-work-container,
 #author-add-work-form, #conditional-author-container {
+  height: auto;
+  width: 50%;
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;   
+}
+
+#author-page-container, #author-work-container{
+  width: 90%;
+}
+
+#single-author-name {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* Contribution List */
