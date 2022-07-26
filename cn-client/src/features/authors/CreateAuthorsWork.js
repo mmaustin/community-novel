@@ -36,34 +36,34 @@ export const CreateAuthorsWork = ({author}) => {
     return(
         <section id='author-work-container'>
             <h2>Add a Work</h2>
-            <form>
-            <label htmlFor="title">Work Title:</label>
-            <input
-                type="text"
-                id="title"
-                name="title"
-                value={title}
-                onChange={onTitleChanged}
-            />
-            <label htmlFor="genre">Genre:</label>
-            <input
-                type="text"
-                id="genre"
-                name="genre"
-                value={genre}
-                onChange={onGenreChanged}
-            />
-            <label htmlFor="contributions">Contributions:</label>
-            <input
-                type="number"
-                id="contributions"
-                name="contributions"
-                value={contributions}
-                onChange={onContributionsChanged}
-            />            
-            <button type="button" onClick={onSaveWorkClicked} disabled={!canSave}>
-                Create Work
-            </button>
+            <form id='author-add-work-form'>
+              <label htmlFor="title">Work Title:</label>
+              <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  value={title}
+                  onChange={onTitleChanged}
+              />
+              <label htmlFor="genre">Genre:</label>
+              <input
+                  type="text"
+                  id="genre"
+                  name="genre"
+                  value={genre}
+                  onChange={onGenreChanged}
+              />
+              <label htmlFor="contributions">Contributions:</label>
+              <input
+                  type="number"
+                  id="contributions"
+                  name="contributions"
+                  value={contributions}
+                  onChange={onContributionsChanged}
+              />            
+              <button type="button" onClick={onSaveWorkClicked} disabled={!canSave}>
+                  Create Work
+              </button>
             </form>
       </section>
     )
