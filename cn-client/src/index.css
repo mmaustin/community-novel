@@ -300,4 +300,12 @@ body {
   background-color: blueviolet;
 }
 
+#author-name {
+  width: 200px;
+}
+
+#author-statement {
+  width: 400px;
+}
+
 }
