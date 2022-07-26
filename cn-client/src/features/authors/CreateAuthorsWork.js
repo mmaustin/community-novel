@@ -34,7 +34,7 @@ export const CreateAuthorsWork = ({author}) => {
       }    
 
     return(
-        <section>
+        <section id='author-work-container'>
             <h2>Add a Work</h2>
             <form>
             <label htmlFor="title">Work Title:</label>

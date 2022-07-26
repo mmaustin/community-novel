@@ -259,7 +259,7 @@ body {
 
 /* Author's Page */
 
-#author-page-container {
+#author-page-container, #author-work-container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
