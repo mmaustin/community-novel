@@ -262,7 +262,7 @@ body {
 #author-page-container, #author-work-container,
 #author-add-work-form, #author-container {
   height: auto;
-  width: 50%;
+  width: 100%;
   margin-top: 30px;
   display: flex;
   justify-content: center;
@@ -270,8 +270,12 @@ body {
   flex-flow: column;   
 }
 
+#author-page-container {
+  background-color: aqua;
+}
+
 #author-page-container, #author-work-container{
-  width: 90%;
+  width: 80%;
 }
 
 #single-author-name {
