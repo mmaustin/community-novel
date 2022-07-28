@@ -22,8 +22,8 @@ export const SingleAuthorPage = () => {
 
     return(
         <div id='author-page-container'>
-            <div id='conditional-author-container'>
-                <p>{author.name}</p>
+            <div id='author-container'>
+                <p id='single-author-name'>{author.name}</p>
                 <p><Link className='all-links' to={`/update-author/${author.id}`} >Edit Author</Link></p>
                 {/*{author ? <p id='single-author-name'>{author.name}</p> : <p>Nope!</p>}
                 {author ? <Link className='all-links' to={`/update-author/${author.id}`} >Edit Author</Link> : <p></p>}*/}
