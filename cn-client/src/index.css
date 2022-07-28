@@ -211,12 +211,12 @@ body {
 /*Add Author Component*/
 
 .add-author-header, .author-form-label-one, .author-form-label-two,
-#author-name, #author-statement {
+#author-name, #author-statement, .author-form-label-three {
   margin: 0px;
   width: 80%;
 }
 
-.author-form-label-one, .author-form-label-two {
+.author-form-label-one, .author-form-label-two , .author-form-label-three {
   font-style: italic;
 }
 
@@ -243,7 +243,7 @@ body {
 }
 
 .author-form-label-one, .author-form-label-two,
-.update-author-button {
+.author-form-label-three, .update-author-button {
   width: auto;
   margin-top: 15px;
 }

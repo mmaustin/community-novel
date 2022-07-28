@@ -37,7 +37,7 @@ export const CreateAuthorsWork = ({author}) => {
         <section id='author-work-container'>
             <h2>Add a Work</h2>
             <form id='author-add-work-form'>
-              <label htmlFor="title">Work Title:</label>
+              <label className='author-form-label-one' htmlFor="title">Work Title:</label>
               <input
                   type="text"
                   id="title"
@@ -45,7 +45,7 @@ export const CreateAuthorsWork = ({author}) => {
                   value={title}
                   onChange={onTitleChanged}
               />
-              <label htmlFor="genre">Genre:</label>
+              <label className='author-form-label-two' htmlFor="genre">Genre:</label>
               <input
                   type="text"
                   id="genre"
@@ -53,7 +53,7 @@ export const CreateAuthorsWork = ({author}) => {
                   value={genre}
                   onChange={onGenreChanged}
               />
-              <label htmlFor="contributions">Contributions Allowed:</label>
+              <label className='author-form-label-three' htmlFor="contributions">Contributions Allowed:</label>
               <input
                   type="number"
                   id="contributions"
