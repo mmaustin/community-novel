@@ -53,7 +53,7 @@ export const CreateAuthorsWork = ({author}) => {
                   value={genre}
                   onChange={onGenreChanged}
               />
-              <label htmlFor="contributions">Contributions:</label>
+              <label htmlFor="contributions">Contributions Allowed:</label>
               <input
                   type="number"
                   id="contributions"
