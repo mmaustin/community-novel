@@ -286,7 +286,6 @@ body {
 /* Contribution List */
 
 .contributions-list-container, .contribution-list-container {
-  border: 1px solid blue;
   width: 100%;
   margin: 0;
   display: flex;
@@ -295,11 +294,16 @@ body {
   flex-flow: column;  
 }
 
+.contributions-list-container {
+  margin-top: 40px;
+}
+
 .contribution-list-container {
   background-color: cornsilk;
   width: 70%;
   height: 300px;
   align-items: center;
+  border-bottom: 3px dotted blue;
 }
 
 /* Update Author */
