@@ -21,7 +21,7 @@ export const ContributionsList = () => {
             <p className='contribution-text'>{cont.text.substring(0, 10)}</p>
             <p className='contribution-author'>Author: {contributionAuthor.name}</p>
             <p className='contribution-work'>Work: {contributionWork.title}</p>
-            <p><Link to={`/get-contribution/${cont.id}`} className="all-links">Full Contribution!</Link></p>          
+            <p><Link to={`/get-contribution/${cont.id}`} className="all-links">Read The Full Contribution Here</Link></p>          
         </div>
 })
 

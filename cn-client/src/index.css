@@ -306,6 +306,13 @@ body {
   border-bottom: 3px dotted blue;
 }
 
+.contribution-text {
+  border: 1px solid red;
+  margin-top: 0;
+  height: 100px;
+  width: 100%;
+}
+
 /* Update Author */
 
 #update-author-container, .update-author-form {
