@@ -299,15 +299,14 @@ body {
 }
 
 .contribution-list-container {
-  background-color: cornsilk;
   width: 70%;
   height: 300px;
   align-items: center;
-  border-bottom: 3px dotted blue;
+  border-top: 3px dotted aqua;
 }
 
 .contribution-text {
-  border: 1px solid red;
+  border-bottom: 1px solid aqua;
   margin-top: 0;
   height: 100px;
   width: 100%;
