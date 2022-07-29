@@ -297,6 +297,7 @@ body {
 
 .contribution-list-container {
   width: 60%;
+  height: 300px;
   align-items: center;
 }
 
