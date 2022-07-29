@@ -296,7 +296,8 @@ body {
 }
 
 .contribution-list-container {
-  width: 60%;
+  background-color: cornsilk;
+  width: 70%;
   height: 300px;
   align-items: center;
 }
