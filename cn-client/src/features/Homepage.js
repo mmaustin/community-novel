@@ -12,7 +12,7 @@ export const Homepage = () => {
     const authorsStatus = useSelector(state => state.authors.status);
     const worksStatus = useSelector(state => state.works.status);
     const contributionsStatus = useSelector(state => state.contributions.status);
-    const [authorDisplayed, setAuthorDisplayed] = useState('yikes!');
+    const [authorDisplayed, setAuthorDisplayed] = useState('');
 
     useEffect(() => {
         if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
@@ -31,6 +31,13 @@ export const Homepage = () => {
             </div>
         })
     }
+
+
+
+    const changeAuthorDisplayed = () => {
+        console.log(authors[Math.floor(Math.random() * authors.length)].name)
+    }
+    changeAuthorDisplayed();
 
 /*    chooseTopic = () => {
         this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
