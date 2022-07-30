@@ -12,7 +12,7 @@ export const Homepage = () => {
     const authorsStatus = useSelector(state => state.authors.status);
     const worksStatus = useSelector(state => state.works.status);
     const contributionsStatus = useSelector(state => state.contributions.status);
-    const [authorDisplayed, setAuthorDisplayed] = useState('');
+    const [authorDisplayed, setAuthorDisplayed] = useState('yikes!');
 
     useEffect(() => {
         if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
@@ -31,10 +31,26 @@ export const Homepage = () => {
             </div>
         })
     }
-    
+
+/*    chooseTopic = () => {
+        this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
+      }
+      
+  handleCountdown = () => {
+    this.setState({countdown: this.state.timer * 60})
+    this.intervalID = setInterval(() => this.setState(previousState => {
+      if (this.state.countdown >= 1) 
+      return { 
+        countdown: previousState.countdown - 1,
+      }
+    }), 1000)
+  }      
+ 
+*/ 
     return(
         <div className='homepage-container'>
             {authorsCollection}
+            <p>{authorDisplayed}</p>
         </div>
     )
 }
