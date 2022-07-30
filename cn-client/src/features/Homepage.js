@@ -33,13 +33,18 @@ export const Homepage = () => {
     }
 
 
-
+    let a;
     const changeAuthorDisplayed = () => {
-        return authors[Math.floor(Math.random() * authors.length)].name
+        if(authors){
+            a = authors[Math.floor(Math.random() * authors.length)].name
+            console.log(a);
+        }
     }
+    
 
     const setAuthorInterval = () => {
-        setInterval(setAuthorDisplayed(changeAuthorDisplayed), 1000)
+        //setInterval(setAuthorDisplayed(a), 1000)
+        changeAuthorDisplayed()
     }
     setAuthorInterval();
 
