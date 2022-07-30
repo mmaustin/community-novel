@@ -25,12 +25,16 @@ export const Homepage = () => {
     let authorsCollection;
 
     if(authorsStatus === 'succeeded'){
-        console.log(authors)
+        authorsCollection = authors.map((author, i) => {
+            return <div className='homepage-author-container' key={i}>
+                    <h4 className='welcome-author'>Welcome, {author.name}</h4>
+            </div>
+        })
     }
     
     return(
         <div className='homepage-container'>
-            <p className='homepage-p'>What's the logic for this here homepage</p>
+            {authorsCollection}
         </div>
     )
 }
