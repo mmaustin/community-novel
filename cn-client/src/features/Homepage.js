@@ -22,7 +22,7 @@ export const Homepage = () => {
         }
     }, [authorsStatus, worksStatus, contributionsStatus, dispatch])
 
-    let authorsCollection;
+    /*let authorsCollection;
 
     if(authorsStatus === 'succeeded'){
         authorsCollection = authors.map((author, i) => {
@@ -30,23 +30,18 @@ export const Homepage = () => {
                     <h4 className='welcome-author'>Welcome, {author.name}</h4>
             </div>
         })
-    }
-
+    }*/
 
     let a;
     const changeAuthorDisplayed = () => {
-        if(authors){
+        if(authors.length > 0){
             a = authors[Math.floor(Math.random() * authors.length)].name
-            console.log(a);
+            return a
         }
     }
-    
 
     const setAuthorInterval = () => {
-        //setInterval(setAuthorDisplayed(a), 1000)
-        changeAuthorDisplayed()
     }
-    setAuthorInterval();
 
 /*    chooseTopic = () => {
         this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
@@ -65,7 +60,7 @@ export const Homepage = () => {
 */ 
     return(
         <div className='homepage-container'>
-            {authorsCollection}
+            {/*{authorsCollection}*/}
             <p>{authorDisplayed}</p>
         </div>
     )
