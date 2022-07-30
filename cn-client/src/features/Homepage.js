@@ -35,9 +35,13 @@ export const Homepage = () => {
 
 
     const changeAuthorDisplayed = () => {
-        console.log(authors[Math.floor(Math.random() * authors.length)].name)
+        return authors[Math.floor(Math.random() * authors.length)].name
     }
-    changeAuthorDisplayed();
+
+    const setAuthorInterval = () => {
+        setInterval(setAuthorDisplayed(changeAuthorDisplayed), 1000)
+    }
+    setAuthorInterval();
 
 /*    chooseTopic = () => {
         this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
