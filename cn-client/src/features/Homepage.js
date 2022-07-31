@@ -22,7 +22,7 @@ export const Homepage = () => {
         }
     }, [authorsStatus, worksStatus, contributionsStatus, dispatch])
 
-    /*let authorsCollection;
+    let authorsCollection;
 
     if(authorsStatus === 'succeeded'){
         authorsCollection = authors.map((author, i) => {
@@ -30,9 +30,9 @@ export const Homepage = () => {
                     <h4 className='welcome-author'>Welcome, {author.name}</h4>
             </div>
         })
-    }*/
+    }
 
-    let a;
+/*    let a;
     const changeAuthorDisplayed = () => {
         if(authors.length > 0){
             a = authors[Math.floor(Math.random() * authors.length)].name
@@ -41,27 +41,13 @@ export const Homepage = () => {
     }
 
     useEffect(()=>{
-        setInterval(()=> console.log('pitch'), 5000);
+        setInterval(()=> setAuthorDisplayed(changeAuthorDisplayed), 5000);
     })
-
-/*    chooseTopic = () => {
-        this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
-      }
-      
-  handleCountdown = () => {
-    this.setState({countdown: this.state.timer * 60})
-    this.intervalID = setInterval(() => this.setState(previousState => {
-      if (this.state.countdown >= 1) 
-      return { 
-        countdown: previousState.countdown - 1,
-      }
-    }), 1000)
-  }      
+*/
  
-*/ 
     return(
         <div className='homepage-container'>
-            {/*{authorsCollection}*/}
+            {authorsCollection}
             <p>{authorDisplayed}</p>
         </div>
     )
