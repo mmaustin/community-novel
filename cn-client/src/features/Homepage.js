@@ -40,8 +40,9 @@ export const Homepage = () => {
         }
     }
 
-    const setAuthorInterval = () => {
-    }
+    useEffect(()=>{
+        setInterval(()=> console.log('pitch'), 5000);
+    })
 
 /*    chooseTopic = () => {
         this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
