@@ -335,7 +335,10 @@ body {
 /* Homepage */
 
 .homepage-container, .homepage-author-container{
+  border: 1px solid aqua;
   margin: 0;
+  width: 75%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
