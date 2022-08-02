@@ -15,14 +15,15 @@ export const Homepage = () => {
     //const [authorDisplayed, setAuthorDisplayed] = useState('');
 
     useEffect(() => {
-        if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
+        //if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
+        if (authorsStatus === 'idle') {
             dispatch(fetchAuthors());
             //dispatch(fetchWorks());
             //dispatch(fetchContributions());
         }
-    })//[authorsStatus, worksStatus, contributionsStatus, dispatch])
+    }, [authorsStatus, dispatch])//[authorsStatus, worksStatus, contributionsStatus, dispatch])
 
-    /*let authorsCollection;
+    let authorsCollection;
 
     if(authorsStatus === 'succeeded'){
         authorsCollection = authors.map((author, i) => {
@@ -30,7 +31,9 @@ export const Homepage = () => {
                     <p className='welcome-author'>{author.name}</p>
             </div>
         })
-    }*/
+    } else if(authorsStatus === 'failed'){
+        authorsCollection = authorsStatus;
+    }
 
 /*    let a;
     const changeAuthorDisplayed = () => {
@@ -48,7 +51,7 @@ export const Homepage = () => {
     return(
         <div className='homepage-container'>
             <h3>Welcome Authors!</h3>
-            {/*{authorsCollection}*/}
+            {authorsCollection}
             {/*<p>{authorDisplayed}</p>*/}
         </div>
     )

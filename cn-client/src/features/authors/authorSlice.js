@@ -5,12 +5,8 @@ const initialState = {authors: [], status: 'idle', error: null,}
 export const fetchAuthors = createAsyncThunk(
   "authors/fetch",
   async () => {
-    try {
-      const res = await DataServiceA.getAll();
-      return res.data;      
-    } catch (error) {
-      console.log(error)
-    }
+    const res = await DataServiceA.getAll();
+    return res.data;      
   }
 );
 export const createAuthor = createAsyncThunk(
