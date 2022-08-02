@@ -2,7 +2,7 @@ import http from "../http-common";
 
 class DataServiceA {
     getAll() {
-        return http.get("/uthors");
+        return http.get("/authors");
     }
     create(author) {
         return http.post("/authors", author);

@@ -15,13 +15,12 @@ export const Homepage = () => {
     //const [authorDisplayed, setAuthorDisplayed] = useState('');
 
     useEffect(() => {
-        //if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
-        if (authorsStatus === 'idle') {
+        if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
             dispatch(fetchAuthors());
             //dispatch(fetchWorks());
             //dispatch(fetchContributions());
         }
-    }, [authorsStatus, dispatch])//[authorsStatus, worksStatus, contributionsStatus, dispatch])
+    }, [authorsStatus, worksStatus, contributionsStatus, dispatch])
 
     let authorsCollection;
 
@@ -31,8 +30,6 @@ export const Homepage = () => {
                     <p className='welcome-author'>{author.name}</p>
             </div>
         })
-    } else if(authorsStatus === 'failed'){
-        authorsCollection = authorsStatus;
     }
 
 /*    let a;
