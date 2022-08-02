@@ -334,7 +334,7 @@ body {
 
 /* Homepage */
 
-.homepage-container, .homepage-author-container{
+.homepage-container, .homepage-author-container, .authors-collection-container {
   border: 1px solid aqua;
   margin: 0;
   width: 75%;
@@ -343,6 +343,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-flow: column;  
+}
+
+.authors-collection-container, .homepage-author-container {
+  width: 75%;
+}
+
+.homepage-author-container {
+  border: 1px solid grey;
+  width: 100%;
 }
 
 .welcome-author {

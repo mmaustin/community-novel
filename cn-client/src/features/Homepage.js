@@ -17,8 +17,8 @@ export const Homepage = () => {
     useEffect(() => {
         if (authorsStatus === 'idle' && worksStatus === 'idle' && contributionsStatus === 'idle'){
             dispatch(fetchAuthors());
-            //dispatch(fetchWorks());
-            //dispatch(fetchContributions());
+            dispatch(fetchWorks());
+            dispatch(fetchContributions());
         }
     }, [authorsStatus, worksStatus, contributionsStatus, dispatch])
 
@@ -48,7 +48,7 @@ export const Homepage = () => {
     return(
         <div className='homepage-container'>
             <h3>Welcome Authors!</h3>
-            {authorsCollection}
+            <div className='authors-collection-container'>{authorsCollection}</div>
             {/*<p>{authorDisplayed}</p>*/}
         </div>
     )
