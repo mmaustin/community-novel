@@ -315,6 +315,7 @@ body {
 /* Update Author */
 
 #update-author-container, .update-author-form {
+  border: 1px solid red;
   margin-top: 20px;
   width: 100%;
   height: auto;
@@ -326,10 +327,15 @@ body {
 
 .update-author-form {
   margin-top: 0;
-  width: 80%;
+  width: 85%;
   height: 350px;
   justify-content: flex-start;
   background-color: aqua;  
+}
+
+#author-statement {
+  width: 75%;
+  border: 1px solid blue;
 }
 
 /* Homepage */
