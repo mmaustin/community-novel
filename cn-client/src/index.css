@@ -297,10 +297,13 @@ body {
 }
 
 .contribution-text {
-  border-bottom: 1px solid aqua;
   margin-top: 0;
-  height: 100px;
+  height: auto;
   width: 100%;
+}
+
+.contribution-author {
+  border-bottom: 1px solid black;
 }
 
 /* Update Author */
