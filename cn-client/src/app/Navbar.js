@@ -15,8 +15,7 @@ export const Navbar = () =>{
                         <Link className='component-link' to='/all-contributions'>The Contributions</Link>                
                     </div>
                 </div>
-            </div>
-            <h4 id='nav-header'>Authors, Works, Contributions!</h4>            
+            </div>            
         </nav>
     )
 }

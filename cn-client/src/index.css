@@ -23,15 +23,6 @@ body {
   flex-flow: wrap;
 }
 
-#nav-header {
-  width: 49%;
-  margin-top: 25px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: wrap;  
-}
-
 .menu-container {
   width: 49%;
   margin-top: 25px;
@@ -339,7 +330,6 @@ body {
 /* Homepage */
 
 .homepage-container, .homepage-author-container, .authors-collection-container {
-  border: 1px solid aqua;
   margin: 0;
   width: 75%;
   height: auto;
@@ -354,7 +344,6 @@ body {
 }
 
 .homepage-author-container {
-  border: 1px solid grey;
   width: 100%;
 }
 
