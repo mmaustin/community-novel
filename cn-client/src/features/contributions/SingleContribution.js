@@ -11,7 +11,7 @@ export const SingleContribution = () => {
     const foundContribution = useSelector(state => getContributionById(state, contributionId));
     
     //const contribution = foundContribution.text
-    let contribution = 'Something went horribly wrong! Return to the homepage.';
+    let contribution = 'Something went wrong! Access the homepage via the Menu button above.';
     
     try {
         if(foundContribution){
@@ -22,8 +22,8 @@ export const SingleContribution = () => {
     }
 
     return(
-        <>
-            <p>{contribution}</p>
-        </>
+        <div className='single-contribution-container'>
+            <p className='contribution-text'>{contribution}</p>
+        </div>
     )
 }

@@ -297,6 +297,7 @@ body {
 }
 
 .contribution-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 0;
   height: auto;
   width: 100%;
