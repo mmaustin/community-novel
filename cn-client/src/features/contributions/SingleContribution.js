@@ -11,16 +11,15 @@ export const SingleContribution = () => {
     const foundContribution = useSelector(state => getContributionById(state, contributionId));
     
     //const contribution = foundContribution.text
-    let contribution;
+    let contribution = 'Something went horribly wrong! Return to the homepage.';
     
     try {
         if(foundContribution){
             contribution = foundContribution.text 
         }
-    } catch (error) {
+    } catch(error)  {
         console.log(error);
     }
-
 
     return(
         <>
