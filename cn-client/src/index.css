@@ -276,7 +276,7 @@ body {
 
 /* Contribution List */
 
-.contributions-list-container, .contribution-list-container {
+.contributions-list-container, .contribution-list-container, .single-contribution-container {
   width: 100%;
   margin: 0;
   display: flex;
@@ -300,7 +300,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 0;
   height: auto;
-  width: 100%;
+  width: auto;
 }
 
 .contribution-author {
