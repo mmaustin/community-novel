@@ -26,8 +26,8 @@ export const ContributionsList = () => {
                 <p><Link to={`/get-contribution/${cont.id}`} className="all-links">Read The Full Contribution Here</Link></p>          
             </div>
         })
-    } catch(erro){
-
+    } catch(error){
+        console.error('Failed: ', error)
     }
 
     return(
