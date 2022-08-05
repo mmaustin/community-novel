@@ -10,7 +10,16 @@ export const SingleContribution = () => {
 
     const foundContribution = useSelector(state => getContributionById(state, contributionId));
     
-    const contribution = foundContribution.text
+    //const contribution = foundContribution.text
+    let contribution;
+    
+    try {
+        if(foundContribution){
+            contribution = foundContribution.text 
+        }
+    } catch (error) {
+        console.log(error);
+    }
 
 
     return(
