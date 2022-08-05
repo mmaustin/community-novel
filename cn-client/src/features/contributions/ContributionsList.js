@@ -13,17 +13,22 @@ export const ContributionsList = () => {
 
     let contributionAuthor;
     let contributionWork;
+    let contributionsList;
 
-    const contributionsList = contributions.map((cont, i) => {
-        contributionAuthor = authors.find(author => author.id === cont.author_id);
-        contributionWork = works.find(work => work.id === cont.work_id);   
-        return <div className='contribution-list-container' key={i}>
-            <p className='contribution-text'>{cont.text.substring(0, 10)}</p>
-            <p className='contribution-author'>Author: {contributionAuthor.name}</p>
-            <p className='contribution-work'>Work: {contributionWork.title}</p>
-            <p><Link to={`/get-contribution/${cont.id}`} className="all-links">Read The Full Contribution Here</Link></p>          
-        </div>
-})
+    try {
+        contributionsList = contributions.map((cont, i) => {
+            contributionAuthor = authors.find(author => author.id === cont.author_id);
+            contributionWork = works.find(work => work.id === cont.work_id);   
+            return <div className='contribution-list-container' key={i}>
+                <p className='contribution-text'>{cont.text.substring(0, 10)}</p>
+                <p className='contribution-author'>Author: {contributionAuthor.name}</p>
+                <p className='contribution-work'>Work: {contributionWork.title}</p>
+                <p><Link to={`/get-contribution/${cont.id}`} className="all-links">Read The Full Contribution Here</Link></p>          
+            </div>
+        })
+    } catch(erro){
+
+    }
 
     return(
         <div className='contributions-list-container'>
