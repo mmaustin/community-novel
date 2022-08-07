@@ -10,7 +10,8 @@ export const NodeHomepage = () => {
                 //'Access-Control-Allow-Origin':'*',
                 }
             })
-            console.log(d.type);
+            const data = await d.json();
+            console.log(data);
         }
         fetchData();
     }, [])
