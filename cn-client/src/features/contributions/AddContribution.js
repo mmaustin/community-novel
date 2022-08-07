@@ -29,7 +29,8 @@ export const AddContribution = ({work, authors}) => {
         if (canSave) {
           try {
             setAddRequestStatus('pending')
-            await dispatch(createContribution({contribution: { text, author_id: authorId, work_id: work.id }})).unwrap()
+            const a = await dispatch(createContribution({contribution: { text, author_id: authorId, work_id: work.id }})).unwrap()
+            console.log(a);
             setText('');
           } catch (err) {
             console.error('Failed to save the contribution: ', err)
