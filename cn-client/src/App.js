@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Navbar } from './app/Navbar';
-//import { Homepage } from './features/Homepage';
+import { Homepage } from './features/Homepage';
 import { AuthorsList } from './features/authors/AuthorsList';
 import { AddAuthorForm }  from './features/authors/AddAuthorForm';
 import { SingleAuthorPage } from './features/authors/SingleAuthorPage';
@@ -11,14 +11,14 @@ import { SingleWorkPage } from './features/works/SingleWorkPage';
 import { ContributionsList } from './features/contributions/ContributionsList';
 import { SingleContribution } from './features/contributions/SingleContribution';
 
-import { NodeHomepage } from './features/NodeHomepage';
+//import { NodeHomepage } from './features/NodeHomepage';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
         <Routes>
-          <Route exact path='/' element={< NodeHomepage />} />      
+          <Route exact path='/' element={< Homepage />} />      
           <Route exact path='/all-authors' element={< AuthorsList />} />
           <Route exact path='/all-works' element={< WorksList />} />
           <Route exact path='/add-author' element={< AddAuthorForm />} />

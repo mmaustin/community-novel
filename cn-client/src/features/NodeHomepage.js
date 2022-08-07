@@ -10,12 +10,12 @@ export const NodeHomepage = () => {
                 //'Access-Control-Allow-Origin':'*',
                 }
             })
-            if (!response.ok) {
+            //if (!response.ok) {
                 //throw new Error(`HTTP error: ${response.status}`);
-                console.log('true')
-            }    
+                //console.log('true')
+            //}    
             //const data = await d.json();
-            //console.log(data);
+            console.log(response);
         }
         fetchData();
     }, [])
