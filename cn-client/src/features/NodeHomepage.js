@@ -4,14 +4,18 @@ export const NodeHomepage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const d = await fetch('http://localhost:5001/api/v1/products', {
+            const response = await fetch('http://localhost:5001/api/v1/products', {
                 mode: 'no-cors',
                 headers: {
                 //'Access-Control-Allow-Origin':'*',
                 }
             })
-            const data = await d.json();
-            console.log(data);
+            if (!response.ok) {
+                //throw new Error(`HTTP error: ${response.status}`);
+                console.log('true')
+            }    
+            //const data = await d.json();
+            //console.log(data);
         }
         fetchData();
     }, [])
