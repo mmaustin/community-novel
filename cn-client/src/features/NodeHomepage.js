@@ -3,16 +3,14 @@ import React, {useEffect} from 'react';
 export const NodeHomepage = () => {
 
     useEffect(() => {
-        const fetchData = () => {
-            fetch('http://localhost:5001/api/v1/products', {
+        const fetchData = async () => {
+            const d = await fetch('http://localhost:5001/api/v1/products', {
                 mode: 'no-cors',
                 headers: {
                 //'Access-Control-Allow-Origin':'*',
                 }
             })
-            .then((response) => response.json())
-            .then((products) => console.log(products));
-            
+            console.log(d.type);
         }
         fetchData();
     }, [])
