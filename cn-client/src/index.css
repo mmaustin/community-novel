@@ -138,7 +138,7 @@ body {
   flex-flow: column;    
 }
 
-.work-headers, .contributions-container,
+.contributions-container,
 .contribution-container, .add-contribution-container, .contribution-form {
   margin-top: 30px;
   width: 100%;
@@ -155,13 +155,6 @@ body {
 
 .contribution-form{
   height: 300px;
-}
-
-.work-headers {
-  margin: 0;
-  width: 90%;
-  justify-content: space-between;
-  flex-flow: row wrap;
 }
 
 .contributions-container {
@@ -358,9 +351,10 @@ body {
 
 /* Single Work Page */
 
-.work-container {
+.work-container, .work-headers {
   border: 1px solid blue;
   margin-top: 20px;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
