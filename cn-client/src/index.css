@@ -138,7 +138,7 @@ body {
   flex-flow: column;    
 }
 
-.work-container, .work-headers, .contributions-container,
+.work-headers, .contributions-container,
 .contribution-container, .add-contribution-container, .contribution-form {
   margin-top: 30px;
   width: 100%;
@@ -282,7 +282,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column;  
+  flex-flow: column;
 }
 
 .contributions-list-container {
@@ -356,6 +356,12 @@ body {
   font-size: 16px;
 }
 
+/* Single Work Page */
+
+.work-container {
+  border: 1px solid blue;
+  margin-top: 20px;
+}
 
 @media only screen and (min-width: 500px) {
 
