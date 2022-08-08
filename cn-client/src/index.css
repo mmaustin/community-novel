@@ -352,7 +352,6 @@ body {
 /* Single Work Page */
 
 .work-container, .work-headers, .work-contribution-container {
-  border: 1px solid blue;
   margin-top: 20px;
   width: 80%;
   display: flex;
@@ -364,6 +363,11 @@ body {
 .work-headers {
   margin: 0;
 }
+
+#contribution {
+  width: 85%;
+}
+
 
 @media only screen and (min-width: 500px) {
 
