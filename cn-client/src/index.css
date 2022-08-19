@@ -360,6 +360,10 @@ body {
   flex-flow: column;
 }
 
+.work-contribution-container {
+  border: 1px solid red;
+}
+
 .work-headers {
   margin: 0;
 }

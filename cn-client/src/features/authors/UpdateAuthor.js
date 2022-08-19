@@ -14,7 +14,7 @@ export const UpdateAuthor = () => {
     const [name, setName] = useState(author.name);
     const [statement, setStatement] = useState(author.statement);
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
-    
+
     const dispatch = useDispatch();
     let navigate = useNavigate();    
 
