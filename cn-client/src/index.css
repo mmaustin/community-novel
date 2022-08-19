@@ -368,6 +368,10 @@ body {
   margin: 0;
 }
 
+.contribution-number {
+  border: 2px solid blue;
+}
+
 #contribution {
   width: 85%;
 }
