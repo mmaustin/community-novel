@@ -361,7 +361,6 @@ body {
 }
 
 .work-contribution-container {
-  border: 1px solid red;
   align-items: flex-start;
 }
 
@@ -370,7 +369,8 @@ body {
 }
 
 .contribution-number {
-  border: 2px solid grey;
+  border-right: 2px solid blue;
+  border-bottom: 2px solid blue;  
   width: 20px;
 }
 
