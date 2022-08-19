@@ -355,13 +355,14 @@ body {
   margin-top: 20px;
   width: 80%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
 }
 
 .work-contribution-container {
   border: 1px solid red;
+  align-items: flex-start;
 }
 
 .work-headers {
@@ -369,7 +370,8 @@ body {
 }
 
 .contribution-number {
-  border: 2px solid blue;
+  border: 2px solid grey;
+  width: 20px;
 }
 
 #contribution {
