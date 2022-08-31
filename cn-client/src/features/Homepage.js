@@ -4,6 +4,7 @@ import { fetchAuthors } from './authors/authorSlice';
 import { fetchWorks } from './works/workSlice';
 import { fetchContributions } from './contributions/contributionSlice';
 import { allAuthors } from './authors/authorSlice';
+import { CreateCanvas } from './homepageCanvas';
 
 export const Homepage = () => {
 
@@ -50,6 +51,7 @@ export const Homepage = () => {
             <h3>Welcome Authors!</h3>
             <div className='authors-collection-container'>{authorsCollection}</div>
             {/*<p>{authorDisplayed}</p>*/}
+            <CreateCanvas/>
         </div>
     )
 }
